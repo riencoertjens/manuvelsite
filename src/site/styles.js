@@ -21,7 +21,7 @@ export const responsiveFontSizes = ['14px', '16px', '16px', '16px', '18px']
 export const colors = {
   blue: '#0B3954',
   red: '#6A041D',
-  grey: '#111',
+  grey: '#222',
   green: '#0F554C',
   gold: '#B88746',
   realGold: 'linear-gradient(90deg, #B88746, #FDF5A6)',

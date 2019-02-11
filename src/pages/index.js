@@ -59,13 +59,51 @@ const InstaPost = ({ post, maxLikes }) => {
         color: white;
         position: relative;
         border-radius: ${pxToRem(5)};
+        * {
+          transition: 0.5s;
+        }
+        .gatsby-image-wrapper {
+          img {
+            filter: grayscale(1);
+          }
+          /* filter: grayscale(0.66); 
+          ::before,
+          ::after {
+            transition: 0.5s;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: 10;
+          }
+          ::before {
+            background: ${colors.realGold};
+            mix-blend-mode: color-burn;
+          } */
+          /* ::after {
+            background: white;
+            mix-blend-mode: soft-light;
+          } */
+        }
         span {
           top: 100%;
         }
         :hover {
-          span {
-            top: 0;
+          .gatsby-image-wrapper {
+            filter: unset;
+            img {
+              filter: unset;
+            }
+            ::after,
+            ::before {
+              opacity: 0;
+            }
           }
+          /* span {
+            top: 0;
+          } */
         }
       `}
     >
@@ -160,7 +198,7 @@ const IndexPage = ({ data }) => {
         />
       </Hero>
       <Section
-        background={colors.realGold}
+        background={colors.grey}
         css={css`
           padding: 0;
         `}
@@ -184,10 +222,10 @@ const IndexPage = ({ data }) => {
               <React.Fragment key={key}>
                 {newInstaPosts}
                 <GridItem
-                  size={[6, 4]}
+                  size={section.size}
                   css={css`
-                    color: ${colors.gold};
-                    background: ${colors.grey};
+                    color: ${section.isGold ? 'black' : colors.gold};
+                    background: ${section.isGold ? colors.realGold : 'black'};
                     padding: ${pxToRem(20)};
                     border-radius: ${pxToRem(5)};
                     h2 {
@@ -221,7 +259,7 @@ const IndexPage = ({ data }) => {
           {data.instaPosts.edges.map(({ node: post }, key) => {
             if (key >= instaPostCounter) {
               return <InstaPost post={post} key={key} maxLikes={maxLikes} />
-            }
+            } else return null
           })}
         </GridWrap>
       </Section>
@@ -244,6 +282,8 @@ export const IndexPageQuery = graphql`
       edges {
         node {
           order
+          size
+          isGold
           title
           tagline
           content
@@ -266,7 +306,7 @@ export const IndexPageQuery = graphql`
       }
     }
     instaPosts: allInstaNode(
-      # limit: 100
+      # limit: 300
       sort: { fields: timestamp, order: DESC }
     ) {
       edges {
