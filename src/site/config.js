@@ -1,23 +1,23 @@
 const base = {
-  owner: `Nicolas Dougall`,
-  name: `Nicolas Dougall`,
-  shortName: `ndougall`,
-  tagline: `plant-powered triathlete`,
-  twitter: `nic_dougall`,
-  instagram: `ndougall`,
-  email: `ndougall92@gmail.com`,
-  phone: `+1(650) 454-6751`,
+  owner: `Rien Coertjens`,
+  name: `Manuvèl`,
+  shortName: `Manuvèl`,
+  tagline: `drink - eat - ride`,
+  twitter: `rien_coertjens`,
+  instagram: `manuvel.be`,
+  email: `info@manuvel.be`,
+  phone: `(+32)012 345 67 89`,
   facebookAppID: ``,
-  facebookPage: `155775668303609`,
-  url: `https://nicdougall.netlify.com`, // no trailing slash!
-  // url: `https://www.nicdougall.com`,
+  facebookPage: ``,
+  url: `https://manuvelbe.netlify.com`, // no trailing slash!
+  // url: `https://www.manuvel.be`,
   titleTemplateSeperator: ` | `,
   icon: `src/images/site-icon.png`, // 1500x1500 This path is relative to the root of the site.
   image: `/images/social-image.png`, // 1200x630 This path is relative to the root of the site.
   language: `en`,
-  description: `Completing the 10 year challenge in style! U19 olympic distance world champion of 2009, plant powered triathlete, Nic Dougall returns to his triathlon roots after working on his cycling leg in world's highest level bike racing league`,
-  primaryColor: `#F0AB25`,
-  primaryBgColor: `#0B2952`,
+  description: `Drink. Eat. Ride. No really,just ride.Have coffee. Upload Strava. Meet up with friends. Take that selfie. Buy those clothes. Whatever.  Stretch!  #9100`,
+  primaryColor: `#B88746`,
+  primaryBgColor: `#222`,
 }
 
 const config = {

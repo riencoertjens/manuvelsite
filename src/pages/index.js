@@ -5,165 +5,229 @@ import Layout from '../components/layout'
 import {
   Hero,
   Section,
-  Container,
   ScrollArrow,
+  pxToRem,
+  OutboundLink,
 } from '../components/webhart-components'
 import GatsbyImage from 'gatsby-image'
 import css from '@emotion/css'
-import LogoSVG from '../images/logo.svg'
-import { colors, ButtonGatsbyLink } from '../site/styles'
-import PostList from '../components/PostList'
-import GatsbyLink from 'gatsby-link'
+import styled from '@emotion/styled-base'
+import LogoSVG from '../images/svg/logo.svg'
+import { colors, fonts } from '../site/styles'
 
-const IndexPage = ({ data }) => (
-  <Layout>
-    <Hero
-      color={colors.blue}
+const squareSize = 75 //px
+//https://codepen.io/balazs_sziklai/pen/mOwoLg
+const GridWrap = styled('div')`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(${pxToRem(squareSize)}, 1fr));
+  grid-gap: ${props => props.gap || pxToRem(10)};
+  padding: ${props => props.gap || pxToRem(10)};
+  grid-auto-rows: minmax(${pxToRem(squareSize)}, auto);
+  grid-auto-flow: dense;
+`
+
+const GridItem = styled('div')`
+  overflow: hidden;
+  ${props =>
+    props.size && props.size.constructor === Array
+      ? `
+      grid-column-end: span ${props.size[0]};
+      grid-row-end: span ${props.size[1]};
+    `
+      : `
+      grid-column-end: span ${props.size};
+      grid-row-end: span ${props.size};
+    `}
+`
+
+const InstaPost = ({ post, maxLikes }) => {
+  const size = Math.round((post.likes / maxLikes) * 2)
+
+  const sizedImages = [
+    post.image.childImageSharp.small || false,
+    post.image.childImageSharp.medium || false,
+    post.image.childImageSharp.large || false,
+  ]
+  const image = sizedImages[size]
+  return (
+    <GridItem
+      as={OutboundLink}
+      href={`https://instagram.com/p/${post.id}`}
+      size={size + 1}
       css={css`
-        padding: 0;
-        justify-content: flex-start;
+        background: ${colors.realGold};
+        color: white;
+        position: relative;
+        border-radius: ${pxToRem(5)};
+        span {
+          top: 100%;
+        }
+        :hover {
+          span {
+            top: 0;
+          }
+        }
       `}
     >
       <GatsbyImage
-        fluid={data.headerImage.childImageSharp.fluid}
+        fluid={image}
         style={{
           position: 'absolute',
           top: 0,
           left: 0,
           width: '100%',
           height: '100%',
-          zIndex: -1,
+          zIndex: 0,
         }}
       />
-      <div
+
+      <span
         css={css`
-          h1,
-          p,
-          img {
-            margin: 0.5rem;
-          }
-          padding-top: 5rem;
-          position: relative;
+          /* white-space: nowrap; */
+          transition: 0.2s;
+          text-overflow: ellipsis;
+          z-index: 1;
+          position: absolute;
+          left: 0;
+          height: 100%;
           width: 100%;
-          background: rgba(255, 255, 255, 0.5);
+          font-size: ${pxToRem(12)};
+          padding: ${pxToRem(5)};
+          background: rgba(0, 0, 0, 0.5);
           :after {
-            content: ' ';
-            display: block;
-            background: linear-gradient(rgba(255, 255, 255, 0.5), transparent);
+            content: 'read more...';
+            padding: ${pxToRem(5)};
             width: 100%;
+            padding-top: 40%;
+            background: linear-gradient(transparent, black, black);
             position: absolute;
-            height: 100px;
+            bottom: 0;
+            left: 0;
           }
         `}
       >
-        <img src={LogoSVG} height={75} alt="logo" />
-        <h1>Nicolas Dougall</h1>
-        <p>{data.site.siteMetadata.siteTagline}</p>
+        {post.caption}
+      </span>
+    </GridItem>
+  )
+}
+
+const IndexPage = ({ data }) => {
+  let instaPostCounter = 0
+  const maxLikes = data.maxLikes.edges[0].node.likes
+  return (
+    <Layout>
+      <Hero
+        height={75}
+        color="white"
+        css={css`
+          color: white;
+          background: rgba(0, 0, 0, 0.66);
+          align-items: stretch;
+        `}
+      >
+        <GatsbyImage
+          fluid={data.headerImage.childImageSharp.fluid}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            zIndex: -1,
+          }}
+        />
+        <div
+          css={css`
+            margin-top: auto;
+          `}
+        >
+          <img
+            alt="logo"
+            src={LogoSVG}
+            css={css`
+              height: 50vh;
+              max-width: 85%;
+            `}
+          />
+          {/* <h1>Manuvel</h1> */}
+        </div>
         <ScrollArrow
-          headerSize={60}
+          color={colors.gold}
           style={css`
             margin-top: auto;
           `}
         />
-      </div>
-    </Hero>
-    <Section background={colors.blue}>
-      <Container>
-        <h2
-          css={css`
-            color: ${colors.yellow};
-          `}
-        >
-          the transition
-        </h2>
-        <p
-          css={css`
-            color: white;
-          `}
-        >
-          I’m really excited to announce that I’ll be returning to triathlon, a
-          sport I’ve always been passionate about, for 2019 and hopefully
-          beyond. Cycling has given me a lot and I’ll always be thankful for my
-          time in the peloton, racing with some of the greatest athletes and
-          mates I’ve ever met, but I’m excited to chase personal success in the
-          sport of triathlon.
-        </p>
-        <ButtonGatsbyLink border to="/about">
-          read more
-        </ButtonGatsbyLink>
-      </Container>
-    </Section>
-    <Section color="black" background="whitesmoke">
-      <Container
+      </Hero>
+      <Section
+        background={colors.realGold}
         css={css`
-          position: relative;
+          padding: 0;
         `}
       >
-        <h2
-          css={css`
-            color: ${colors.blue};
-          `}
-        >
-          blog
-        </h2>
-        <PostList posts={data.posts} />
-      </Container>
-    </Section>
-    <Section background={colors.yellow}>
-      <Container>
-        <h2
-          css={css`
-            color: ${colors.blue};
-          `}
-        >
-          Partners
-        </h2>
-        <p
-          css={css`
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            margin: 0 -1rem;
-            flex-wrap: wrap;
-            a {
-              margin: 1rem;
-              flex: 0 0 300px;
-              text-align: center;
-              color: ${colors.yellow};
-              filter: grayscale(1) brightness(50%);
-              &:hover {
-                filter: saturate(1);
+        <GridWrap gap={pxToRem(5)}>
+          {data.sections.edges.map(({ node: section }, key) => {
+            let newInstaPosts = []
+            for (let i = 0; i < 6; i++) {
+              if (data.instaPosts.edges.length > instaPostCounter) {
+                newInstaPosts.push(
+                  <InstaPost
+                    post={data.instaPosts.edges[instaPostCounter].node}
+                    key={i}
+                    maxLikes={maxLikes}
+                  />
+                )
               }
+              instaPostCounter++
             }
-          `}
-        >
-          <GatsbyLink to="/partners#ventum">
-            <GatsbyImage fluid={data.ventum.childImageSharp.fluid} />
-          </GatsbyLink>
-          <GatsbyLink to="/partners#hokaoneone">
-            <GatsbyImage fluid={data.hokaoneone.childImageSharp.fluid} />
-          </GatsbyLink>
-          <GatsbyLink to="/partners#incrediwear">
-            <GatsbyImage fluid={data.incrediwear.childImageSharp.fluid} />
-          </GatsbyLink>
-        </p>
-        <>
-          <ButtonGatsbyLink
-            border
-            alt
-            to="/partners"
-            css={css`
-              margin: 0 auto;
-            `}
-          >
-            more info
-          </ButtonGatsbyLink>
-        </>
-      </Container>
-    </Section>
-  </Layout>
-)
+            return (
+              <React.Fragment key={key}>
+                {newInstaPosts}
+                <GridItem
+                  size={[6, 4]}
+                  css={css`
+                    color: ${colors.gold};
+                    background: ${colors.grey};
+                    padding: ${pxToRem(20)};
+                    border-radius: ${pxToRem(5)};
+                    h2 {
+                      font-size: ${pxToRem(60)};
+                      border-bottom: 1px solid;
+                      margin-bottom: ${pxToRem(10)};
+                    }
+                    p {
+                      margin-bottom: ${pxToRem(10)};
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                  `}
+                >
+                  <h2>{section.title}</h2>
+                  <p
+                    css={css`
+                      font-family: ${fonts.logo};
+                      letter-spacing: -0.013rem;
+                      text-transform: uppercase;
+                    `}
+                  >
+                    {section.tagline}
+                  </p>
+                  <p>{section.content}</p>
+                </GridItem>
+              </React.Fragment>
+            )
+          })}
+          {data.instaPosts.edges.map(({ node: post }, key) => {
+            if (key >= instaPostCounter) {
+              return <InstaPost post={post} key={key} maxLikes={maxLikes} />
+            }
+          })}
+        </GridWrap>
+      </Section>
+    </Layout>
+  )
+}
 
 export default IndexPage
 
@@ -176,7 +240,17 @@ export const IndexPageQuery = graphql`
         siteDescription
       }
     }
-    headerImage: file(base: { eq: "nic-on-bike.jpg" }) {
+    sections: allSectionsJson(sort: { fields: order, order: ASC }) {
+      edges {
+        node {
+          order
+          title
+          tagline
+          content
+        }
+      }
+    }
+    headerImage: file(base: { eq: "social-image.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1800) {
           ...GatsbyImageSharpFluid
@@ -184,41 +258,50 @@ export const IndexPageQuery = graphql`
       }
       ...SEOImageFragment
     }
-    posts: allMarkdownRemark(
-      filter: {
-        frontmatter: {
-          templateKey: { eq: "post" }
-          featured: { eq: true }
-          draft: { eq: false }
+    maxLikes: allInstaNode(limit: 1, sort: { fields: likes, order: DESC }) {
+      edges {
+        node {
+          likes
         }
       }
-      sort: { order: DESC, fields: frontmatter___date }
-      limit: 3
+    }
+    instaPosts: allInstaNode(
+      # limit: 100
+      sort: { fields: timestamp, order: DESC }
     ) {
       edges {
         node {
-          ...PostListFragment
-        }
-      }
-    }
-    ventum: file(base: { eq: "sponsor-ventum.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    hokaoneone: file(base: { eq: "sponsor-hokaoneone.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    incrediwear: file(base: { eq: "sponsor-incrediwear.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          id
+          likes
+          comments
+          original
+          timestamp
+          caption
+          image: localFile {
+            childImageSharp {
+              small: fluid(
+                maxWidth: 120
+                maxHeight: 120
+                traceSVG: { color: "black" }
+              ) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+              medium: fluid(
+                maxWidth: 240
+                maxHeight: 240
+                traceSVG: { color: "black" }
+              ) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+              large: fluid(
+                maxWidth: 480
+                maxHeight: 480
+                traceSVG: { color: "black" }
+              ) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
         }
       }
     }

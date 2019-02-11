@@ -1,11 +1,11 @@
 import css from '@emotion/css'
 import styled from '@emotion/styled'
 
-import 'typeface-raleway'
-import 'typeface-montserrat'
-
 import GatsbyLink from 'gatsby-link'
 import { getFonts } from '../components/webhart-components/functions'
+
+import 'typeface-raleway'
+import 'typeface-titillium-web'
 
 export const lineHeight = '1.5'
 export const spacing = 1.5
@@ -19,27 +19,41 @@ export const baseFontSize = 16
 export const responsiveFontSizes = ['14px', '16px', '16px', '16px', '18px']
 
 export const colors = {
-  blue: '#0B2952',
-  yellow: '#F0AB25',
+  blue: '#0B3954',
+  red: '#6A041D',
+  grey: '#111',
+  green: '#0F554C',
+  gold: '#B88746',
+  realGold: 'linear-gradient(90deg, #B88746, #FDF5A6)',
 }
 
 export const fontFamilies = {
-  body: ['Montserrat', 'sans-serif'],
-  title: ['Raleway', 'sans-serif'],
+  body: ['Raleway', 'sans-serif'],
+  title: ['Simplifica', 'sans-serif'],
+  logo: ['"Titillium Web"', 'sans-serif'],
 }
-
-export const fonts = getFonts(fontFamilies)
-
 export const useTypography = true
+
 export const typographySettings = {
   baseFontSize: baseFontSize[2],
   baseLineHeight: lineHeight,
   scaleRatio: 2.5,
   headerFontFamily: fontFamilies.title,
+  headerWeight: 100,
   bodyFontFamily: fontFamilies.body,
 }
 
+export const fonts = getFonts(fontFamilies)
+
 export const globalStyle = css`
+  @font-face {
+    font-family: 'Simplifica';
+    src: url('./fonts/Simplifica.woff2') format('woff2'),
+      url('./fonts/Simplifica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
   blockquote {
     font-style: italic;
     span {
