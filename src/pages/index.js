@@ -8,14 +8,20 @@ import {
   ScrollArrow,
   pxToRem,
   OutboundLink,
+  SocialLinks,
 } from '../components/webhart-components'
+import Map from '../components/webhart-components/GoogleMap'
+
 import GatsbyImage from 'gatsby-image'
 import css from '@emotion/css'
 import styled from '@emotion/styled-base'
 import LogoSVG from '../images/svg/logo.svg'
+import WebhartLogo from '../images/Logo'
 import { colors, fonts } from '../site/styles'
+import Obfuscate from 'react-obfuscate'
 
-const squareSize = 75 //px
+const squareSize = 100 //px
+const borderRadius = 7.5 //px
 //https://codepen.io/balazs_sziklai/pen/mOwoLg
 const GridWrap = styled('div')`
   display: grid;
@@ -28,16 +34,13 @@ const GridWrap = styled('div')`
 
 const GridItem = styled('div')`
   overflow: hidden;
-  ${props =>
-    props.size && props.size.constructor === Array
-      ? `
-      grid-column-end: span ${props.size[0]};
-      grid-row-end: span ${props.size[1]};
-    `
-      : `
-      grid-column-end: span ${props.size};
-      grid-row-end: span ${props.size};
+  ${props => `
+      grid-column-end: span ${props.width || 1};
+      grid-row-end: span ${props.height || 1};
     `}
+  @media (max-width: ${props => props.width * squareSize}px) {
+    grid-column: 1/-1;
+  }
 `
 
 const InstaPost = ({ post, maxLikes }) => {
@@ -53,23 +56,17 @@ const InstaPost = ({ post, maxLikes }) => {
     <GridItem
       as={OutboundLink}
       href={`https://instagram.com/p/${post.id}`}
-      size={size + 1}
+      width={size + 1}
+      height={size + 1}
       css={css`
         background: ${colors.realGold};
         color: white;
+        border-radius: ${pxToRem(borderRadius)};
         position: relative;
-        border-radius: ${pxToRem(5)};
-        * {
-          transition: 0.5s;
-        }
+
         .gatsby-image-wrapper {
-          img {
-            filter: grayscale(1);
-          }
-          /* filter: grayscale(0.66); 
           ::before,
           ::after {
-            transition: 0.5s;
             content: '';
             width: 100%;
             height: 100%;
@@ -80,21 +77,23 @@ const InstaPost = ({ post, maxLikes }) => {
           }
           ::before {
             background: ${colors.realGold};
-            mix-blend-mode: color-burn;
-          } */
-          /* ::after {
-            background: white;
-            mix-blend-mode: soft-light;
-          } */
+            mix-blend-mode: hue;
+          }
+          ::after {
+            background: #777;
+            mix-blend-mode: overlay;
+          }
+          img {
+            filter: brightness(0.66);
+          }
         }
         span {
           top: 100%;
         }
         :hover {
           .gatsby-image-wrapper {
-            filter: unset;
             img {
-              filter: unset;
+              filter: brightness(1);
             }
             ::after,
             ::before {
@@ -119,10 +118,8 @@ const InstaPost = ({ post, maxLikes }) => {
         }}
       />
 
-      <span
+      {/* <span
         css={css`
-          /* white-space: nowrap; */
-          transition: 0.2s;
           text-overflow: ellipsis;
           z-index: 1;
           position: absolute;
@@ -145,9 +142,20 @@ const InstaPost = ({ post, maxLikes }) => {
         `}
       >
         {post.caption}
-      </span>
+      </span> */}
     </GridItem>
   )
+}
+
+const GeneratePosts = ({ posts, count, counter, maxLikes }) => {
+  for (let i = 0; i < count; i++) {
+    if (posts.length > counter) {
+      return (
+        <InstaPost post={posts[counter].node} key={i} maxLikes={maxLikes} />
+      )
+    }
+    counter++
+  }
 }
 
 const IndexPage = ({ data }) => {
@@ -188,7 +196,6 @@ const IndexPage = ({ data }) => {
               max-width: 85%;
             `}
           />
-          {/* <h1>Manuvel</h1> */}
         </div>
         <ScrollArrow
           color={colors.gold}
@@ -204,9 +211,10 @@ const IndexPage = ({ data }) => {
         `}
       >
         <GridWrap gap={pxToRem(5)}>
-          {data.sections.edges.map(({ node: section }, key) => {
-            let newInstaPosts = []
-            for (let i = 0; i < 6; i++) {
+          {data.content.frontmatter.sections.map((section, key) => {
+            {
+              /* let newInstaPosts = []
+            for (let i = 0; i < 2; i++) {
               if (data.instaPosts.edges.length > instaPostCounter) {
                 newInstaPosts.push(
                   <InstaPost
@@ -217,25 +225,26 @@ const IndexPage = ({ data }) => {
                 )
               }
               instaPostCounter++
+            } */
             }
             return (
               <React.Fragment key={key}>
-                {newInstaPosts}
+                <GeneratePosts
+                  posts={data.instaPosts.edges}
+                  count={2}
+                  counter={instaPostCounter}
+                  maxLikes={maxLikes}
+                >
+                  {(instaPostCounter += 2)}
+                </GeneratePosts>
                 <GridItem
-                  size={section.size}
+                  width={section.width}
+                  height={section.height}
                   css={css`
                     color: ${section.isGold ? 'black' : colors.gold};
                     background: ${section.isGold ? colors.realGold : 'black'};
                     padding: ${pxToRem(20)};
-                    border-radius: ${pxToRem(5)};
-                    h2 {
-                      font-size: ${pxToRem(60)};
-                      border-bottom: 1px solid;
-                      margin-bottom: ${pxToRem(10)};
-                    }
-                    p {
-                      margin-bottom: ${pxToRem(10)};
-                    }
+                    border-radius: ${pxToRem(borderRadius)};
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -244,6 +253,7 @@ const IndexPage = ({ data }) => {
                   <h2>{section.title}</h2>
                   <p
                     css={css`
+                      margin-bottom: ${pxToRem(10)};
                       font-family: ${fonts.logo};
                       letter-spacing: -0.013rem;
                       text-transform: uppercase;
@@ -251,16 +261,336 @@ const IndexPage = ({ data }) => {
                   >
                     {section.tagline}
                   </p>
-                  <p>{section.content}</p>
+                  <p
+                    css={css`
+                      color: ${section.isGold ? colors.blue : '#999'};
+                      margin-bottom: 0;
+                    `}
+                  >
+                    {section.contentNL}
+                  </p>
+                  <p
+                    css={css`
+                      font-style: italic;
+                    `}
+                  >
+                    {section.content}
+                  </p>
                 </GridItem>
               </React.Fragment>
             )
           })}
+          <GeneratePosts
+            posts={data.instaPosts.edges}
+            count={2}
+            counter={instaPostCounter}
+            maxLikes={maxLikes}
+          >
+            {(instaPostCounter += 2)}
+          </GeneratePosts>
+          {/* contact */}
+          <GridItem
+            width={6}
+            height={3}
+            css={css`
+              background: black;
+              color: ${colors.gold};
+              border-radius: ${pxToRem(borderRadius)};
+              display: flex;
+              justify-content: space-evenly;
+              flex-wrap: wrap;
+              & > div {
+                flex: 1 0 50%;
+              }
+            `}
+          >
+            <div
+              css={css`
+                padding: ${pxToRem(20)};
+                p {
+                  margin-top: 0.75rem;
+                  margin-bottom: 0;
+                }
+              `}
+            >
+              <h2>contact</h2>
+              <p>
+                tue-fri: 8 - 16
+                <br />
+                sat-sun: 9 - 12
+                <br />
+                monday = restday
+              </p>
+              <p>
+                blabla 123
+                <br />
+                1234 sint niklaas
+              </p>
+              <p
+                css={css`
+                  a {
+                    display: block !important;
+                    color: ${colors.gold};
+                    text-align: left;
+                  }
+                `}
+              >
+                <Obfuscate tel="(+32)12/34 56 78" />
+                <Obfuscate email="info@manuvel.be" />
+              </p>
+              <p>
+                <SocialLinks
+                  {...data.site.socials}
+                  style={css`
+                    color: ${colors.gold};
+                    font-size: ${pxToRem(24)};
+                  `}
+                />
+              </p>
+            </div>
+            <div
+              css={css`
+                background: ${colors.realGold};
+                position: relative;
+              `}
+            >
+              <Map
+                className={css`
+                  width: 100%;
+                  height: 100%;
+                `}
+                apiKey={data.site.siteMetadata.mapsApiKey} //"AIzaSyByEeWhiQXGQWogI0fByfhNsssWN5cFE5o"
+                options={{
+                  center: { lat: 51.155841, lng: 4.154293 },
+                  zoom: 14,
+                  disableDefaultUI: true,
+                  styles: [
+                    {
+                      elementType: 'geometry',
+                      stylers: [
+                        {
+                          color: '#212121',
+                        },
+                      ],
+                    },
+                    {
+                      elementType: 'labels.icon',
+                      stylers: [
+                        {
+                          visibility: 'off',
+                        },
+                      ],
+                    },
+                    {
+                      elementType: 'labels.text.fill',
+                      stylers: [
+                        {
+                          color: '#757575',
+                        },
+                      ],
+                    },
+                    {
+                      elementType: 'labels.text.stroke',
+                      stylers: [
+                        {
+                          color: '#212121',
+                        },
+                      ],
+                    },
+                    {
+                      featureType: 'administrative',
+                      elementType: 'geometry',
+                      stylers: [
+                        {
+                          color: '#757575',
+                        },
+                      ],
+                    },
+                    {
+                      featureType: 'administrative.country',
+                      elementType: 'labels.text.fill',
+                      stylers: [
+                        {
+                          color: '#9e9e9e',
+                        },
+                      ],
+                    },
+                    {
+                      featureType: 'administrative.land_parcel',
+                      stylers: [
+                        {
+                          visibility: 'off',
+                        },
+                      ],
+                    },
+                    {
+                      featureType: 'administrative.locality',
+                      elementType: 'labels.text.fill',
+                      stylers: [
+                        {
+                          color: '#bdbdbd',
+                        },
+                      ],
+                    },
+                    {
+                      featureType: 'poi',
+                      elementType: 'labels.text.fill',
+                      stylers: [
+                        {
+                          color: '#757575',
+                        },
+                      ],
+                    },
+                    {
+                      featureType: 'poi.park',
+                      elementType: 'geometry',
+                      stylers: [
+                        {
+                          color: '#181818',
+                        },
+                      ],
+                    },
+                    {
+                      featureType: 'poi.park',
+                      elementType: 'labels.text.fill',
+                      stylers: [
+                        {
+                          color: '#616161',
+                        },
+                      ],
+                    },
+                    {
+                      featureType: 'poi.park',
+                      elementType: 'labels.text.stroke',
+                      stylers: [
+                        {
+                          color: '#1b1b1b',
+                        },
+                      ],
+                    },
+                    {
+                      featureType: 'road',
+                      elementType: 'geometry.fill',
+                      stylers: [
+                        {
+                          color: '#d2b06a',
+                        },
+                        {
+                          weight: 1,
+                        },
+                      ],
+                    },
+                    {
+                      featureType: 'road',
+                      elementType: 'labels',
+                      stylers: [
+                        {
+                          visibility: 'off',
+                        },
+                      ],
+                    },
+                    {
+                      featureType: 'road.arterial',
+                      elementType: 'geometry',
+                      stylers: [
+                        {
+                          color: '#b88746',
+                        },
+                      ],
+                    },
+                    {
+                      featureType: 'road.highway',
+                      elementType: 'geometry',
+                      stylers: [
+                        {
+                          color: '#222222',
+                        },
+                      ],
+                    },
+                    {
+                      featureType: 'road.highway',
+                      elementType: 'geometry.stroke',
+                      stylers: [
+                        {
+                          color: '#b88746',
+                        },
+                      ],
+                    },
+                    {
+                      featureType: 'water',
+                      elementType: 'geometry',
+                      stylers: [
+                        {
+                          color: '#666666',
+                        },
+                      ],
+                    },
+                    {
+                      featureType: 'water',
+                      elementType: 'labels.text.fill',
+                      stylers: [
+                        {
+                          color: '#3d3d3d',
+                        },
+                      ],
+                    },
+                  ],
+                }}
+              />
+            </div>
+          </GridItem>
+          <GeneratePosts
+            posts={data.instaPosts.edges}
+            count={2}
+            counter={instaPostCounter}
+            maxLikes={maxLikes}
+          >
+            {(instaPostCounter += 2)}
+          </GeneratePosts>
+          {/* registreer */}
+          <GridItem
+            height={1}
+            width={1}
+            as={OutboundLink}
+            href="https://www.web-hart.com"
+            css={css`
+              background: ${colors.blue};
+              color: #FF8C00;//${colors.gold};
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-evenly;
+              border-radius: ${pxToRem(borderRadius)};
+              text-decoration: none;
+              svg {
+                max-width: 85%;
+                height: auto;
+              }
+            `}
+          >
+            <span>website by</span> <WebhartLogo />
+          </GridItem>
           {data.instaPosts.edges.map(({ node: post }, key) => {
             if (key >= instaPostCounter) {
               return <InstaPost post={post} key={key} maxLikes={maxLikes} />
             } else return null
           })}
+          <GridItem
+            height={1}
+            width={6}
+            css={css`
+              background: black;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: ${colors.gold};
+              border-radius: ${pxToRem(borderRadius)};
+              a {
+              }
+            `}
+          >
+            <span>&copy; www.manuvel.be {new Date().getFullYear()}</span>
+          </GridItem>
         </GridWrap>
       </Section>
     </Layout>
@@ -273,9 +603,30 @@ export const IndexPageQuery = graphql`
   query IndexPageQuery {
     site {
       siteMetadata {
+        mapsApiKey
         siteTitle
         siteTagline
         siteDescription
+      }
+      socials: siteMetadata {
+        instagram: instagramUsername
+        #twitter: twitterUsername
+        #facebook: facebookPage
+      }
+    }
+    content: markdownRemark(frontmatter: { templateKey: { eq: "home-page" } }) {
+      frontmatter {
+        title
+        templateKey
+        sections {
+          title
+          tagline
+          isGold: gold
+          width
+          height
+          content: contentEN
+          contentNL
+        }
       }
     }
     sections: allSectionsJson(sort: { fields: order, order: ASC }) {
@@ -306,7 +657,7 @@ export const IndexPageQuery = graphql`
       }
     }
     instaPosts: allInstaNode(
-      # limit: 300
+      limit: 100
       sort: { fields: timestamp, order: DESC }
     ) {
       edges {

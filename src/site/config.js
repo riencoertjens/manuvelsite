@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const base = {
   owner: `Rien Coertjens`,
   name: `Manuvèl`,
@@ -38,6 +40,7 @@ const config = {
     facebookPage: base.facebookPage,
     facebookAppID: base.facebookAppID,
     siteLanguage: base.language,
+    mapsApiKey: process.env.MAPS_API_KEY,
     organization: {
       name: base.owner,
       url: base.url,

@@ -2,7 +2,7 @@ import css from '@emotion/css'
 import styled from '@emotion/styled'
 
 import GatsbyLink from 'gatsby-link'
-import { getFonts } from '../components/webhart-components/functions'
+import { getFonts, pxToRem } from '../components/webhart-components/functions'
 
 import 'typeface-raleway'
 import 'typeface-titillium-web'
@@ -53,7 +53,11 @@ export const globalStyle = css`
     font-weight: normal;
     font-style: normal;
   }
-
+  h2 {
+    font-size: ${pxToRem(60)};
+    border-bottom: 1px solid;
+    margin-bottom: ${pxToRem(10)};
+  }
   blockquote {
     font-style: italic;
     span {

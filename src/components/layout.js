@@ -9,40 +9,7 @@ import SEO from './webhart-components/SEO'
 // import LogoSVG from '../images/logo.svg'
 // import LogoNegSVG from '../images/logo-neg.svg'
 
-import { FaInstagram as InstagramIcon } from 'react-icons/fa'
-import { FaTwitter as TwitterIcon } from 'react-icons/fa'
-import { FaFacebookF as FacebookIcon } from 'react-icons/fa'
-import { OutboundLink, globalStyle } from './webhart-components'
-
-const SocialLinks = ({ instagram, facebook, twitter, css }) => (
-  <>
-    {instagram && (
-      <OutboundLink
-        aria-label="instagram"
-        href={`https://instagram.com/${instagram}`}
-        {...css}
-      >
-        <InstagramIcon />
-      </OutboundLink>
-    )}
-    {twitter && (
-      <OutboundLink
-        aria-label="twitter"
-        href={`https://twitter.com/${twitter}`}
-      >
-        <TwitterIcon />
-      </OutboundLink>
-    )}
-    {facebook && (
-      <OutboundLink
-        aria-label="facebook"
-        href={`https://facebook.com/${facebook}`}
-      >
-        <FacebookIcon />
-      </OutboundLink>
-    )}
-  </>
-)
+import { globalStyle } from './webhart-components'
 
 class Layout extends Component {
   constructor(props) {
@@ -70,9 +37,7 @@ class Layout extends Component {
           <>
             <Global styles={globalStyle} />
             <SEO />
-            <header css={css``}>
-              <SocialLinks {...data.site.socials} />
-            </header>
+
             <main>{children}</main>
           </>
         )}

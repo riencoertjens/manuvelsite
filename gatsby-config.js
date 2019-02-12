@@ -6,13 +6,11 @@ module.exports = {
   plugins: [
     // source
     {
-      //https://graph.facebook.com/v3.2/10218557873676892/accounts?fields=fields=name,id,access_token,instagram_business_account{id,username,profile_picture_url}&access_token=EAAIKRN12OeMBAJZAZCMBO1ZAZA9ZBu5ommf0HXU9cTzNikhEPqublMV9vfv6WXotkWLfCT66XopdzVuIsA0G3OipUkLgR3eIHxpaVS6owDFVKtZBzKKZCOgOiTbZAxY1sZBTPH6FoRGGhQzq7DrRgLjs9iZBtbDZAeiAlIZD
       resolve: `gatsby-source-instagram`,
       options: {
         username: `rien_coertjens`,
-        access_token:
-          'EAAIKRN12OeMBABhHLlnsNtjcBuZC0spdFca2SoUqjAHyPLX9Cck43OZB6QzStOol1WaeAcZBdBo9KdziZCQAg8pmUEdVuoE17BmxjCc69mZCLeiL4bWdvcwZArCUc6AgHKA9VawHFC7i8UnZCzwJ9oayIykZCHRhCZATPJZCT8AScVmAZDZD',
-        instagram_id: '17841400765150032',
+        access_token: `${process.env.IG_ACCESS_TOKEN}`,
+        instagram_id: `${process.env.IG_ACCOUNT_ID}`,
       },
     },
     {
@@ -94,7 +92,7 @@ module.exports = {
         policy: [
           {
             userAgent: '*',
-            disallow: ['/404', '/bericht-verzonden', '/admin'],
+            disallow: ['/404', '/admin'],
           },
         ],
       },
@@ -112,12 +110,13 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',
-    // {
-    //   resolve: 'gatsby-plugin-netlify-cms',
-    //   options: {
-    //     modulePath: `${__dirname}/src/cms/cms.js`,
-    //   },
-    // },
+
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
     {
       resolve: 'gatsby-plugin-netlify', //keep last
       options: {

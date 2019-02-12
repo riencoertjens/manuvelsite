@@ -10,65 +10,72 @@ collections:
   - name: 'pages'
     label: 'Pages'
     files:
-      - file: 'src/content/calendar-page.md'
-        label: 'Calendar'
-        name: 'calendar'
+      - file: 'src/content/home-page.md'
+        label: 'Home'
+        name: 'home'
+        preview: false
         fields: [
           {
             label: 'Template Key',
             name: 'templateKey',
             widget: 'hidden',
-            default: 'calendar-page',
+            default: 'home-page',
           },
           {
-            label: Events,
-            name: events,
+            label: Sections,
+            name: sections,
             widget: list,
             fields: [
-              { label: Name, name: title, widget: string },
-              { label: Date, name: date, widget: date },
-              { label: End Date, name: end-date, widget: date, required: false },
-              { label: Type, name: type, widget: string },
+              { label: Title, name: title, widget: string },
+              { label: Tagline, name: tagline, widget: string },
+              { label: Gold, name: gold, widget: boolean, default: false },
+              { label: Width, name: width, widget: number, default: 6 },
+              { label: height, name: height, widget: number, default: 3 },
               {
-                label: Description,
-                name: description,
-                widget: string,
+                label: Content(EN),
+                name: contentEN,
+                widget: text,
+              },
+              {
+                label: Content(NL),
+                name: contentNL,
+                widget: text,
               },
             ],
           },
         ]
-  - name: 'posts'
-    label: 'Blog'
-    folder: 'src/content/blog'
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    fields:
-      - {
-          label: 'Template Key',
-          name: 'templateKey',
-          widget: 'hidden',
-          default: 'post',
-        }
-      - { label: 'Image', name: 'image', widget: 'image' }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
-      - {
-          label: 'Featured',
-          name: 'featured',
-          widget: 'boolean',
-          default: false,
-        }
-      - {
-          label: 'Show on pages',
-          name: 'pages',
-          widget: 'select',
-          multiple: true,
-          options: [
-            'about',
-            'partners',
-            'calendar',
-          ],
-        }
-      - { label: 'Tags (comma seperated)', name: 'tags', widget: 'list', required: false }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+  # - name: 'posts'
+  #   label: 'Blog'
+  #   folder: 'src/content/blog'
+  #   create: true
+  #   slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+  #   fields:
+  #     - {
+  #         label: 'Template Key',
+  #         name: 'templateKey',
+  #         widget: 'hidden',
+  #         default: 'post',
+  #       }
+  #     - { label: 'Image', name: 'image', widget: 'image' }
+  #     - { label: 'Title', name: 'title', widget: 'string' }
+  #     - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+  #     - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
+  #     - {
+  #         label: 'Featured',
+  #         name: 'featured',
+  #         widget: 'boolean',
+  #         default: false,
+  #       }
+  #     - {
+  #         label: 'Show on pages',
+  #         name: 'pages',
+  #         widget: 'select',
+  #         multiple: true,
+  #         options: [
+  #           'about',
+  #           'partners',
+  #           'calendar',
+  #         ],
+  #       }
+  #     - { label: 'Tags (comma seperated)', name: 'tags', widget: 'list', required: false }
+  #     - { label: 'Body', name: 'body', widget: 'markdown' }
