@@ -17,7 +17,7 @@ const base = {
   icon: `src/images/site-icon.png`, // 1500x1500 This path is relative to the root of the site.
   image: `/images/social-image.jpg`, // 1200x630 This path is relative to the root of the site.
   language: `en`,
-  description: `Drink. Eat. Ride. No really,just ride.Have coffee. Upload Strava. Meet up with friends. Take that selfie. Buy those clothes. Whatever.  Stretch!  #9100`,
+  description: `Drink. Eat. Ride. No really, just ride. Have coffee. Upload Strava. Meet up with friends. Take that selfie. Buy those clothes. Whatever.  Stretch!  #9100`,
   primaryColor: `#B88746`,
   primaryBgColor: `#222`,
 }
@@ -28,7 +28,7 @@ const config = {
     owner: base.owner,
     email: base.email,
     phone: base.phone,
-    siteTitle: base.tagline,
+    siteTitle: `${base.tagline} | ${base.name}`,
     siteDescription: base.description,
     siteTagline: base.tagline,
     siteImage: base.image,
