@@ -15,7 +15,7 @@ const base = {
   // url: `https://www.manuvel.be`,
   titleTemplateSeperator: ` | `,
   icon: `src/images/site-icon.png`, // 1500x1500 This path is relative to the root of the site.
-  image: `/images/social-image.png`, // 1200x630 This path is relative to the root of the site.
+  image: `/images/social-image.jpg`, // 1200x630 This path is relative to the root of the site.
   language: `en`,
   description: `Drink. Eat. Ride. No really,just ride.Have coffee. Upload Strava. Meet up with friends. Take that selfie. Buy those clothes. Whatever.  Stretch!  #9100`,
   primaryColor: `#B88746`,
