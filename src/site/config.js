@@ -11,7 +11,7 @@ const base = {
   phone: `(+32)012 345 67 89`,
   facebookAppID: ``,
   facebookPage: ``,
-  url: `https://manuvelbe.netlify.com`, // no trailing slash!
+  url: `https://manuvelsite.netlify.com`, // no trailing slash!
   // url: `https://www.manuvel.be`,
   titleTemplateSeperator: ` | `,
   icon: `src/images/site-icon.png`, // 1500x1500 This path is relative to the root of the site.
