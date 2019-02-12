@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { StaticQuery, graphql } from 'gatsby'
 
-import { Global, css } from '@emotion/core'
+import { Global } from '@emotion/core'
 import SEO from './webhart-components/SEO'
 
 // import LogoSVG from '../images/logo.svg'

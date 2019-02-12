@@ -22,6 +22,7 @@ import Obfuscate from 'react-obfuscate'
 
 const squareSize = 100 //px
 const borderRadius = 7.5 //px
+
 //https://codepen.io/balazs_sziklai/pen/mOwoLg
 const GridWrap = styled('div')`
   display: grid;
@@ -212,21 +213,6 @@ const IndexPage = ({ data }) => {
       >
         <GridWrap gap={pxToRem(5)}>
           {data.content.frontmatter.sections.map((section, key) => {
-            {
-              /* let newInstaPosts = []
-            for (let i = 0; i < 2; i++) {
-              if (data.instaPosts.edges.length > instaPostCounter) {
-                newInstaPosts.push(
-                  <InstaPost
-                    post={data.instaPosts.edges[instaPostCounter].node}
-                    key={i}
-                    maxLikes={maxLikes}
-                  />
-                )
-              }
-              instaPostCounter++
-            } */
-            }
             return (
               <React.Fragment key={key}>
                 <GeneratePosts
@@ -263,7 +249,7 @@ const IndexPage = ({ data }) => {
                   </p>
                   <p
                     css={css`
-                      color: ${section.isGold ? colors.blue : '#999'};
+                      color: ${section.isGold ? '#444' : '#999'};
                       margin-bottom: 0;
                     `}
                   >
@@ -288,9 +274,40 @@ const IndexPage = ({ data }) => {
           >
             {(instaPostCounter += 2)}
           </GeneratePosts>
+          {/* registreer */}
+          <GridItem
+            height={3}
+            width={2}
+            css={css`
+              color: ${colors.gold};
+              background: black;
+              padding: ${pxToRem(20)};
+              border-radius: ${pxToRem(borderRadius)};
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            `}
+          >
+            <h2>registreer</h2>
+            <div>
+              naam
+              <br />
+              email
+              <br />
+              checkbox
+            </div>
+          </GridItem>
+          <GeneratePosts
+            posts={data.instaPosts.edges}
+            count={2}
+            counter={instaPostCounter}
+            maxLikes={maxLikes}
+          >
+            {(instaPostCounter += 2)}
+          </GeneratePosts>
           {/* contact */}
           <GridItem
-            width={6}
+            width={5}
             height={3}
             css={css`
               background: black;
@@ -299,14 +316,12 @@ const IndexPage = ({ data }) => {
               display: flex;
               justify-content: space-evenly;
               flex-wrap: wrap;
-              & > div {
-                flex: 1 0 50%;
-              }
             `}
           >
             <div
               css={css`
                 padding: ${pxToRem(20)};
+                flex: 1 0 ${pxToRem(squareSize * 2)};
                 p {
                   margin-top: 0.75rem;
                   margin-bottom: 0;
@@ -348,10 +363,13 @@ const IndexPage = ({ data }) => {
                 />
               </p>
             </div>
+            {/* map */}
             <div
               css={css`
                 background: ${colors.realGold};
                 position: relative;
+                flex: 1 0 ${pxToRem(squareSize * 3)};
+                min-height: ${pxToRem(squareSize * 3)};
               `}
             >
               <Map
@@ -359,7 +377,7 @@ const IndexPage = ({ data }) => {
                   width: 100%;
                   height: 100%;
                 `}
-                apiKey={data.site.siteMetadata.mapsApiKey} //"AIzaSyByEeWhiQXGQWogI0fByfhNsssWN5cFE5o"
+                apiKey={data.site.siteMetadata.mapsApiKey}
                 options={{
                   center: { lat: 51.155841, lng: 4.154293 },
                   zoom: 14,
@@ -547,7 +565,7 @@ const IndexPage = ({ data }) => {
           >
             {(instaPostCounter += 2)}
           </GeneratePosts>
-          {/* registreer */}
+          {/* webhart */}
           <GridItem
             height={1}
             width={1}
@@ -566,15 +584,22 @@ const IndexPage = ({ data }) => {
                 max-width: 85%;
                 height: auto;
               }
+              span{
+                font-size: ${pxToRem(12)};
+              }
             `}
           >
             <span>website by</span> <WebhartLogo />
           </GridItem>
-          {data.instaPosts.edges.map(({ node: post }, key) => {
-            if (key >= instaPostCounter) {
-              return <InstaPost post={post} key={key} maxLikes={maxLikes} />
-            } else return null
-          })}
+          <GeneratePosts
+            posts={data.instaPosts.edges}
+            count={2}
+            counter={instaPostCounter}
+            maxLikes={maxLikes}
+          >
+            {(instaPostCounter += 2)}
+          </GeneratePosts>
+          {/* copy */}
           <GridItem
             height={1}
             width={6}
@@ -591,6 +616,12 @@ const IndexPage = ({ data }) => {
           >
             <span>&copy; www.manuvel.be {new Date().getFullYear()}</span>
           </GridItem>
+          {/* all remaining posts */}
+          {data.instaPosts.edges.map(({ node: post }, key) => {
+            if (key >= instaPostCounter) {
+              return <InstaPost post={post} key={key} maxLikes={maxLikes} />
+            } else return null
+          })}
         </GridWrap>
       </Section>
     </Layout>
@@ -626,18 +657,6 @@ export const IndexPageQuery = graphql`
           height
           content: contentEN
           contentNL
-        }
-      }
-    }
-    sections: allSectionsJson(sort: { fields: order, order: ASC }) {
-      edges {
-        node {
-          order
-          size
-          isGold
-          title
-          tagline
-          content
         }
       }
     }
