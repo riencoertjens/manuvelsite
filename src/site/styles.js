@@ -7,6 +7,9 @@ import { getFonts, pxToRem } from '../components/webhart-components/functions'
 import 'typeface-raleway'
 import 'typeface-titillium-web'
 
+import SimplificaFont from './fonts/Simplifica.woff'
+import SimplificaFont2 from './fonts/Simplifica.woff2'
+
 export const lineHeight = '1.5'
 export const spacing = 1.5
 
@@ -48,8 +51,8 @@ export const fonts = getFonts(fontFamilies)
 export const globalStyle = css`
   @font-face {
     font-family: 'Simplifica';
-    src: url('./fonts/Simplifica.woff2') format('woff2'),
-      url('./fonts/Simplifica.woff') format('woff');
+    src: url(${SimplificaFont}) format('woff2'),
+      url(${SimplificaFont2}) format('woff');
     font-weight: normal;
     font-style: normal;
   }
