@@ -26,7 +26,7 @@ export const colors = {
   red: '#6A041D',
   grey: '#222',
   green: '#0F554C',
-  gold: '#B88746',
+  gold: '#DBBF77',
   realGold: 'linear-gradient(90deg, #B88746, #FDF5A6)',
 }
 
@@ -55,6 +55,11 @@ export const globalStyle = css`
       url(${SimplificaFont2}) format('woff');
     font-weight: normal;
     font-style: normal;
+  }
+  *::selection {
+    color: black;
+    text-shadow: 1px 1px 2px ${colors.gold}88;
+    background: ${colors.gold};
   }
   h2 {
     font-size: ${pxToRem(60)};
