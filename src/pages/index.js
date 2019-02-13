@@ -548,8 +548,8 @@ export const IndexPageQuery = graphql`
                 ...GatsbyImageSharpFluid_tracedSVG
               }
               large: fluid(
-                maxWidth: 480
-                maxHeight: 480
+                maxWidth: 360
+                maxHeight: 360
                 traceSVG: { color: "black" }
               ) {
                 ...GatsbyImageSharpFluid_tracedSVG
