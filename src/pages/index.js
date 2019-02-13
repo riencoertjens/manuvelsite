@@ -10,15 +10,17 @@ import {
   OutboundLink,
   SocialLinks,
 } from '../components/webhart-components'
-import Map from '../components/webhart-components/GoogleMap'
+import GoogleMap from '../components/webhart-components/Map'
 
 import GatsbyImage from 'gatsby-image'
 import css from '@emotion/css'
 import styled from '@emotion/styled-base'
 import LogoSVG from '../images/svg/logo.svg'
 import WebhartLogo from '../images/Logo'
-import { colors, fonts } from '../site/styles'
+import { colors, fonts, mapStyle } from '../site/styles'
 import Obfuscate from 'react-obfuscate'
+
+import markerIcon from '../images/svg/mapmarker.svg'
 
 const squareSize = 100 //px
 const borderRadius = 7.5 //px
@@ -307,7 +309,7 @@ const IndexPage = ({ data }) => {
           </GeneratePosts>
           {/* contact */}
           <GridItem
-            width={5}
+            width={6}
             height={3}
             css={css`
               background: black;
@@ -368,191 +370,29 @@ const IndexPage = ({ data }) => {
               css={css`
                 background: ${colors.realGold};
                 position: relative;
-                flex: 1 0 ${pxToRem(squareSize * 3)};
+                flex: 1 0 ${pxToRem(squareSize * 4)};
                 min-height: ${pxToRem(squareSize * 3)};
               `}
             >
-              <Map
-                className={css`
-                  width: 100%;
-                  height: 100%;
-                `}
+              <GoogleMap
                 apiKey={data.site.siteMetadata.mapsApiKey}
+                location={data.site.siteMetadata.businessLocation}
+                markerIcon={markerIcon}
+                markerInfoComponent={
+                  <OutboundLink
+                    css={css`
+                      color: ${colors.gold};
+                    `}
+                    href="https://www.google.com/maps/dir//Stationsstraat+95,+9100+Sint-Niklaas,+Belgium"
+                  >
+                    directions
+                  </OutboundLink>
+                }
                 options={{
-                  center: { lat: 51.155841, lng: 4.154293 },
-                  zoom: 14,
+                  center: data.site.siteMetadata.businessLocation,
+                  zoom: 15,
                   disableDefaultUI: true,
-                  styles: [
-                    {
-                      elementType: 'geometry',
-                      stylers: [
-                        {
-                          color: '#212121',
-                        },
-                      ],
-                    },
-                    {
-                      elementType: 'labels.icon',
-                      stylers: [
-                        {
-                          visibility: 'off',
-                        },
-                      ],
-                    },
-                    {
-                      elementType: 'labels.text.fill',
-                      stylers: [
-                        {
-                          color: '#757575',
-                        },
-                      ],
-                    },
-                    {
-                      elementType: 'labels.text.stroke',
-                      stylers: [
-                        {
-                          color: '#212121',
-                        },
-                      ],
-                    },
-                    {
-                      featureType: 'administrative',
-                      elementType: 'geometry',
-                      stylers: [
-                        {
-                          color: '#757575',
-                        },
-                      ],
-                    },
-                    {
-                      featureType: 'administrative.country',
-                      elementType: 'labels.text.fill',
-                      stylers: [
-                        {
-                          color: '#9e9e9e',
-                        },
-                      ],
-                    },
-                    {
-                      featureType: 'administrative.land_parcel',
-                      stylers: [
-                        {
-                          visibility: 'off',
-                        },
-                      ],
-                    },
-                    {
-                      featureType: 'administrative.locality',
-                      elementType: 'labels.text.fill',
-                      stylers: [
-                        {
-                          color: '#bdbdbd',
-                        },
-                      ],
-                    },
-                    {
-                      featureType: 'poi',
-                      elementType: 'labels.text.fill',
-                      stylers: [
-                        {
-                          color: '#757575',
-                        },
-                      ],
-                    },
-                    {
-                      featureType: 'poi.park',
-                      elementType: 'geometry',
-                      stylers: [
-                        {
-                          color: '#181818',
-                        },
-                      ],
-                    },
-                    {
-                      featureType: 'poi.park',
-                      elementType: 'labels.text.fill',
-                      stylers: [
-                        {
-                          color: '#616161',
-                        },
-                      ],
-                    },
-                    {
-                      featureType: 'poi.park',
-                      elementType: 'labels.text.stroke',
-                      stylers: [
-                        {
-                          color: '#1b1b1b',
-                        },
-                      ],
-                    },
-                    {
-                      featureType: 'road',
-                      elementType: 'geometry.fill',
-                      stylers: [
-                        {
-                          color: '#d2b06a',
-                        },
-                        {
-                          weight: 1,
-                        },
-                      ],
-                    },
-                    {
-                      featureType: 'road',
-                      elementType: 'labels',
-                      stylers: [
-                        {
-                          visibility: 'off',
-                        },
-                      ],
-                    },
-                    {
-                      featureType: 'road.arterial',
-                      elementType: 'geometry',
-                      stylers: [
-                        {
-                          color: '#b88746',
-                        },
-                      ],
-                    },
-                    {
-                      featureType: 'road.highway',
-                      elementType: 'geometry',
-                      stylers: [
-                        {
-                          color: '#222222',
-                        },
-                      ],
-                    },
-                    {
-                      featureType: 'road.highway',
-                      elementType: 'geometry.stroke',
-                      stylers: [
-                        {
-                          color: '#b88746',
-                        },
-                      ],
-                    },
-                    {
-                      featureType: 'water',
-                      elementType: 'geometry',
-                      stylers: [
-                        {
-                          color: '#666666',
-                        },
-                      ],
-                    },
-                    {
-                      featureType: 'water',
-                      elementType: 'labels.text.fill',
-                      stylers: [
-                        {
-                          color: '#3d3d3d',
-                        },
-                      ],
-                    },
-                  ],
+                  styles: mapStyle,
                 }}
               />
             </div>
@@ -635,6 +475,10 @@ export const IndexPageQuery = graphql`
     site {
       siteMetadata {
         mapsApiKey
+        businessLocation {
+          lat
+          lng
+        }
         siteTitle
         siteTagline
         siteDescription

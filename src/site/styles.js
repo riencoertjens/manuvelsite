@@ -109,5 +109,158 @@ export const Button = styled.button`
     `}
 `
 
+export const mapStyle = [
+  {
+    featureType: 'administrative',
+    elementType: 'labels.text.fill',
+    stylers: [
+      {
+        color: '#dbbf78',
+      },
+    ],
+  },
+  {
+    featureType: 'administrative',
+    elementType: 'labels.text.stroke',
+    stylers: [
+      {
+        color: '#000000',
+      },
+      {
+        weight: 2,
+      },
+    ],
+  },
+  {
+    featureType: 'landscape',
+    stylers: [
+      {
+        color: '#222222',
+      },
+    ],
+  },
+  {
+    featureType: 'poi',
+    stylers: [
+      {
+        visibility: 'off',
+      },
+    ],
+  },
+  {
+    featureType: 'poi.park',
+    stylers: [
+      {
+        color: '#000000',
+      },
+      {
+        visibility: 'on',
+      },
+    ],
+  },
+  {
+    featureType: 'poi.park',
+    elementType: 'labels',
+    stylers: [
+      {
+        color: '#929292',
+      },
+      {
+        visibility: 'on',
+      },
+    ],
+  },
+  {
+    featureType: 'poi.park',
+    elementType: 'labels.text.stroke',
+    stylers: [
+      {
+        visibility: 'off',
+      },
+    ],
+  },
+  {
+    featureType: 'road',
+    stylers: [
+      {
+        color: '#dbbf78',
+      },
+    ],
+  },
+  {
+    featureType: 'road',
+    elementType: 'labels',
+    stylers: [
+      {
+        visibility: 'off',
+      },
+    ],
+  },
+  {
+    featureType: 'road.arterial',
+    elementType: 'geometry',
+    stylers: [
+      {
+        weight: 2,
+      },
+    ],
+  },
+  {
+    featureType: 'road.highway',
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        color: '#222222',
+      },
+      {
+        weight: 2,
+      },
+    ],
+  },
+  {
+    featureType: 'road.highway',
+    elementType: 'geometry.stroke',
+    stylers: [
+      {
+        color: '#dbbf78',
+      },
+    ],
+  },
+  {
+    featureType: 'road.local',
+    elementType: 'geometry',
+    stylers: [
+      {
+        weight: 0.5,
+      },
+    ],
+  },
+  {
+    featureType: 'transit',
+    stylers: [
+      {
+        color: '#000000',
+      },
+    ],
+  },
+  {
+    featureType: 'transit',
+    elementType: 'labels',
+    stylers: [
+      {
+        visibility: 'off',
+      },
+    ],
+  },
+  {
+    featureType: 'water',
+    stylers: [
+      {
+        color: '#515151',
+      },
+    ],
+  },
+]
+
 export const ButtonLink = Button.withComponent('a')
 export const ButtonGatsbyLink = Button.withComponent(GatsbyLink)

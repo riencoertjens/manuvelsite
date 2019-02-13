@@ -11,6 +11,7 @@ const base = {
   phone: `(+32)012 345 67 89`,
   facebookAppID: ``,
   facebookPage: ``,
+  businessLocation: { lat: 51.16851, lng: 4.142393 },
   url: `https://manuvelsite.netlify.com`, // no trailing slash!
   // url: `https://www.manuvel.be`,
   titleTemplateSeperator: ` | `,
@@ -26,6 +27,7 @@ const config = {
   base: base,
   siteMetadata: {
     owner: base.owner,
+    businessLocation: base.businessLocation,
     email: base.email,
     phone: base.phone,
     siteTitle: `${base.tagline} | ${base.name}`,
