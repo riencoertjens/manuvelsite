@@ -13,7 +13,8 @@ collections:
       - file: 'src/content/home-page.md'
         label: 'Home'
         name: 'home'
-        preview: false
+        editor:
+          preview: false
         fields: [
           {
             label: 'Template Key',
