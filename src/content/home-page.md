@@ -61,18 +61,27 @@ sections:
     width: 5
   - contentEN: >-
       unique cycling shirt + bibs by manuvèl + socks + cap | exclusive discounts
-      on selected items | free tickets | free gadgets | early bird privileges.
+      on selected items | free tickets | free gadgets | early bird privileges |
+      social rides
 
       Contact us for more info! 
     contentNL: >-
       unique cycling shirt + bibs by manuvèl + socks + cap | exclusive discounts
-      on selected items | free tickets | free gadgets | early bird privileges.
+      on selected items | free tickets | free gadgets | early bird privileges |
+      social rides
 
       Contacteer ons voor meer info!
     gold: true
     height: '2'
     tagline: black & gold - just like your soul
     title: Manuvèl Maniacs
+    width: '2'
+  - contentEN: We'll keep you posted!
+    contentNL: Info volgt!
+    gold: false
+    height: '2'
+    tagline: Open your mind
+    title: Special Events & Workshops
     width: '2'
 ---
 
