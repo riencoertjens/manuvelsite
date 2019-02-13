@@ -21,6 +21,7 @@ import { colors, fonts, mapStyle } from '../site/styles'
 import Obfuscate from 'react-obfuscate'
 
 import markerIcon from '../images/svg/mapmarker.svg'
+import MailchimpForm from '../components/MailchimpForm'
 
 const squareSize = 100 //px
 const borderRadius = 7.5 //px
@@ -251,7 +252,7 @@ const IndexPage = ({ data }) => {
                   </p>
                   <p
                     css={css`
-                      color: ${section.isGold ? '#444' : '#999'};
+                      color: ${section.isGold ? colors.grey : colors.lightGrey};
                       margin-bottom: 0;
                     `}
                   >
@@ -276,10 +277,10 @@ const IndexPage = ({ data }) => {
           >
             {(instaPostCounter += 2)}
           </GeneratePosts>
-          {/* registreer */}
+          {/* register */}
           <GridItem
             height={3}
-            width={2}
+            width={3}
             css={css`
               color: ${colors.gold};
               background: black;
@@ -290,13 +291,9 @@ const IndexPage = ({ data }) => {
               justify-content: center;
             `}
           >
-            <h2>registreer</h2>
+            <h2>register</h2>
             <div>
-              naam
-              <br />
-              email
-              <br />
-              checkbox
+              <MailchimpForm />
             </div>
           </GridItem>
           <GeneratePosts

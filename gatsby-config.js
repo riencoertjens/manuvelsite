@@ -66,7 +66,13 @@ module.exports = {
         omitGoogleFont: true,
       },
     },
-
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint:
+          'https://manuvel.us20.list-manage.com/subscribe/post?u=92a4f0acc56fc60a2d717948f&amp;id=cc0a5e7021', // see instructions section below
+      },
+    },
     // optimize
     {
       resolve: `gatsby-plugin-google-analytics`,

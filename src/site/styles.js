@@ -24,6 +24,7 @@ export const responsiveFontSizes = ['14px', '16px', '16px', '16px', '18px']
 export const colors = {
   blue: '#0B3954',
   red: '#6A041D',
+  lightGrey: '#999',
   grey: '#222',
   green: '#0F554C',
   gold: '#DBBF77',
@@ -55,6 +56,9 @@ export const globalStyle = css`
       url(${SimplificaFont2}) format('woff');
     font-weight: normal;
     font-style: normal;
+  }
+  a {
+    color: #999;
   }
   *::selection {
     color: black;
