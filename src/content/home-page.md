@@ -45,7 +45,7 @@ sections:
     gold: false
     height: 3
     tagline: vip parking & lounge spot
-    title: DIY workstand
+    title: DIY workbench
     width: 5
   - contentEN: >-
       Work together like the Wolf Pack, have that meeting in the atmosphere of
