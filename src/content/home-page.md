@@ -73,6 +73,6 @@ sections:
     height: '2'
     tagline: black & gold - just like your soul
     title: Manuvèl Maniacs
-    width: '4'
+    width: '3'
 ---
 
