@@ -61,14 +61,12 @@ sections:
     width: 5
   - contentEN: >-
       unique cycling shirt + bibs by manuvèl + socks + cap | exclusive discounts
-      on selected items | free tickets | free gadgets | early bird privileges
-
+      on selected items | free tickets | free gadgets | early bird privileges.
 
       Contact us for more info! 
     contentNL: >-
       unique cycling shirt + bibs by manuvèl + socks + cap | exclusive discounts
-      on selected items | free tickets | free gadgets | early bird privileges
-
+      on selected items | free tickets | free gadgets | early bird privileges.
 
       Contacteer ons voor meer info!
     gold: true
