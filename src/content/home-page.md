@@ -62,9 +62,15 @@ sections:
   - contentEN: >-
       unique cycling shirt + bibs by manuvèl + socks + cap | exclusive discounts
       on selected items | free tickets | free gadgets | early bird privileges
+
+
+      Contact us for more info! 
     contentNL: >-
       unique cycling shirt + bibs by manuvèl + socks + cap | exclusive discounts
       on selected items | free tickets | free gadgets | early bird privileges
+
+
+      Contacteer ons voor meer info!
     gold: true
     height: 3
     tagline: black & gold - just like your soul
