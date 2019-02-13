@@ -70,9 +70,9 @@ sections:
 
       Contacteer ons voor meer info!
     gold: true
-    height: 3
+    height: '2'
     tagline: black & gold - just like your soul
     title: Manuvèl Maniacs
-    width: 5
+    width: '4'
 ---
 
