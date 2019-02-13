@@ -25,10 +25,9 @@ class Layout extends Component {
         query={graphql`
           query SiteTitleQuery {
             site {
-              socials: siteMetadata {
-                instagram: instagramUsername
-                twitter: twitterUsername
-                facebook: facebookPage
+              siteMetadata {
+                siteTitle
+                siteTagline
               }
             }
           }
@@ -36,7 +35,11 @@ class Layout extends Component {
         render={data => (
           <>
             <Global styles={globalStyle} />
-            <SEO />
+            <SEO
+              title={`${data.site.siteMetadata.siteTitle} | ${
+                data.site.siteMetadata.siteTagline
+              }`}
+            />
 
             <main>{children}</main>
           </>

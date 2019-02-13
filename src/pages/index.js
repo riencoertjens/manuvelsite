@@ -329,16 +329,19 @@ const IndexPage = ({ data }) => {
             >
               <h2>contact</h2>
               <p>
+                opening soon
+                {/* 
                 tue-fri: 8 - 16
                 <br />
                 sat-sun: 9 - 12
                 <br />
-                monday = restday
+                monday = restday 
+                */}
               </p>
               <p>
-                blabla 123
+                Stationsstraat 95
                 <br />
-                1234 sint niklaas
+                9100 Sint Niklaas
               </p>
               <p
                 css={css`
@@ -349,7 +352,7 @@ const IndexPage = ({ data }) => {
                   }
                 `}
               >
-                <Obfuscate tel="(+32)12/34 56 78" />
+                {/* <Obfuscate tel="(+32)12/34 56 78" /> */}
                 <Obfuscate email="info@manuvel.be" />
               </p>
               <p>
