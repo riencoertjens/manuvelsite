@@ -11,10 +11,10 @@ sections:
       het wel érgens ter wereld iemands verjaardag is...Koffie gebrouwen door
       Rocket Espresso, klaar voor jouw lift-off.
     gold: false
-    height: 3
+    height: '3'
     tagline: always a good idea
     title: Food & Drinks
-    width: 5
+    width: '5'
   - contentEN: >-
       Take a look at our shop, unicorn bikes, cool accessories & gadgets. You
       could give up shopping but we know you're not a quitter. You already
@@ -26,10 +26,10 @@ sections:
       opgever bent. Je Strava is toch al naar de haaien, kan je evengoed hier je
       tijd spenderen.
     gold: false
-    height: 3
+    height: '3'
     tagline: '#noquitters'
     title: Shop in shop
-    width: 5
+    width: '5'
   - contentEN: >-
       Couldn't find the right pace? Need an excuse? Think your wheel is jammed?
       Bad form? Visit our DIY workbench just to make sure  . Two left hands?
@@ -43,10 +43,10 @@ sections:
 
       Hulplijn en VIP parkeerplek mogelijk.
     gold: false
-    height: 3
+    height: '3'
     tagline: vip parking & lounge spot
     title: DIY workbench
-    width: 5
+    width: '5'
   - contentEN: >-
       Work together like the Wolf Pack, have that meeting in the atmosphere of
       your true passion. We got you covered...
@@ -55,10 +55,10 @@ sections:
       volgende meeting in een sportieve sfeer. We zijn je waterdragers. Of
       meer..
     gold: false
-    height: 3
+    height: '3'
     tagline: work space / meeting room
     title: Co-working
-    width: 5
+    width: '5'
   - contentEN: >-
       unique cycling shirt + bibs by manuvèl + socks + cap | exclusive discounts
       on selected items | free tickets | free gadgets | early bird privileges |
@@ -72,15 +72,15 @@ sections:
 
       Contacteer ons voor meer info!
     gold: true
-    height: 2
+    height: '2'
     tagline: black & gold - just like your soul
     title: Manuvèl Maniacs
-    width: 2
+    width: '2'
   - contentEN: We'll keep you posted!
     contentNL: Info volgt!
     gold: false
-    height: 2
+    height: '2'
     tagline: Open your mind
     title: Special Events & Workshops
-    width: 2
+    width: '2'
 ---
