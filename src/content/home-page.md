@@ -48,18 +48,6 @@ sections:
     title: DIY workbench
     width: '5'
   - contentEN: >-
-      Work together like the Wolf Pack, have that meeting in the atmosphere of
-      your true passion. We got you covered...
-    contentNL: >-
-      Samenwerken als The Wolfpack, de weg naar succes, als een team naar die
-      volgende meeting in een sportieve sfeer. We zijn je waterdragers. Of
-      meer..
-    gold: false
-    height: '2'
-    tagline: work space / meeting room
-    title: Co-working
-    width: '3'
-  - contentEN: >-
       unique cycling shirt + bibs by manuvèl + socks + cap | exclusive discounts
       on selected items | free tickets | free gadgets | early bird privileges |
       social rides | Manuvèl's loyalty program
@@ -77,6 +65,18 @@ sections:
     tagline: black & gold - just like your soul
     title: Manuvèl Maniacs
     width: '2'
+  - contentEN: >-
+      Work together like the Wolf Pack, have that meeting in the atmosphere of
+      your true passion. We got you covered...
+    contentNL: >-
+      Samenwerken als The Wolfpack, de weg naar succes, als een team naar die
+      volgende meeting in een sportieve sfeer. We zijn je waterdragers. Of
+      meer..
+    gold: false
+    height: '2'
+    tagline: work space / meeting room
+    title: Co-working
+    width: '3'
   - contentEN: We'll keep you posted!  More info coming soon.
     contentNL: Info volgt!
     gold: false
