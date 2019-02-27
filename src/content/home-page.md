@@ -76,11 +76,11 @@ sections:
     tagline: black & gold - just like your soul
     title: Manuvèl Maniacs
     width: '2'
-  - contentEN: We'll keep you posted!
+  - contentEN: We'll keep you posted!  More info coming soon.
     contentNL: Info volgt!
     gold: false
     height: '2'
-    tagline: Open your mind. More info coming soon.
+    tagline: Open your mind.
     title: Special Events & Workshops
     width: '5'
 ---
