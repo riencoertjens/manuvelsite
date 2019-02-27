@@ -55,10 +55,10 @@ sections:
       volgende meeting in een sportieve sfeer. We zijn je waterdragers. Of
       meer..
     gold: false
-    height: '3'
+    height: '2'
     tagline: work space / meeting room
     title: Co-working
-    width: '5'
+    width: '3'
   - contentEN: >-
       unique cycling shirt + bibs by manuvèl + socks + cap | exclusive discounts
       on selected items | free tickets | free gadgets | early bird privileges |
