@@ -82,6 +82,6 @@ sections:
     height: '2'
     tagline: Open your mind. More info coming soon.
     title: Special Events & Workshops
-    width: '3'
+    width: '5'
 ---
 
