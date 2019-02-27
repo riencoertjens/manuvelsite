@@ -65,7 +65,7 @@ sections:
       social rides | Manuvèl's loyalty program
 
 
-      More info to be announced soon! Please register below.
+      More info to be announced soon! Please register for updates.
     contentNL: >-
       unique cycling shirt + bibs by manuvèl + socks + cap | exclusive discounts
       on selected items | free tickets | free gadgets | early bird privileges |
