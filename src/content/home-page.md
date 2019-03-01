@@ -55,7 +55,7 @@ sections:
       volgende meeting in een sportieve sfeer. We zijn je waterdragers. Of
       meer..
     gold: false
-    height: '2'
+    height: '3'
     tagline: work space / meeting room
     title: Co-working
     width: '3'
