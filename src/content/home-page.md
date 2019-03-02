@@ -49,7 +49,7 @@ sections:
     width: '5'
   - contentEN: >-
       Work together like the Wolf Pack, have that meeting in the atmosphere of
-      your true passion. We got you covered...
+      your true passion. We've got you covered...
     contentNL: >-
       Samenwerken als The Wolfpack, de weg naar succes, als een team naar die
       volgende meeting in een sportieve sfeer. We zijn je waterdragers. Of
