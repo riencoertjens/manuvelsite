@@ -36,7 +36,7 @@ class Layout extends Component {
           <>
             <Global styles={globalStyle} />
             <SEO
-              title={`${data.site.siteMetadata.siteTitle} | ${
+              title={`${
                 data.site.siteMetadata.siteTagline
               }`}
             />
