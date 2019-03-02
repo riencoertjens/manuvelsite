@@ -12,8 +12,8 @@ const base = {
   facebookAppID: ``,
   facebookPage: ``,
   businessLocation: { lat: 51.16851, lng: 4.142393 },
-  url: `https://manuvelsite.netlify.com`, // no trailing slash!
-  // url: `https://www.manuvel.be`,
+  // url: `https://manuvelsite.netlify.com`, // no trailing slash!
+  url: `https://www.manuvel.be`,
   titleTemplateSeperator: ` | `,
   icon: `src/images/site-icon.png`, // 1500x1500 This path is relative to the root of the site.
   image: `/images/social-image.jpg`, // 1200x630 This path is relative to the root of the site.
