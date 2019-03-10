@@ -67,9 +67,9 @@ sections:
 
       More info to be announced soon! Please register for updates.
     contentNL: >-
-      unique cycling shirt + bibs by manuvèl + socks + cap | exclusive discounts
-      on selected items | free tickets | free gadgets | early bird privileges |
-      social rides | and more
+      Manuvèl's loyalty program | unique cycling shirt + bibs short + socks +
+      cap | exclusive discounts on selected items | free tickets | free gadgets
+      | early bird privileges | social rides | and more
 
 
       Contacteer ons voor meer info! 
