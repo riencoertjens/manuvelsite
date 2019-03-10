@@ -62,17 +62,17 @@ sections:
   - contentEN: >-
       Manuvèl's loyalty program | unique cycling shirt + bibs short + socks +
       cap | exclusive discounts on selected items | free tickets | free gadgets
-      | early bird privileges | social rides | 
+      | early bird privileges | social rides | and more
 
 
       More info to be announced soon! Please register for updates.
     contentNL: >-
       unique cycling shirt + bibs by manuvèl + socks + cap | exclusive discounts
       on selected items | free tickets | free gadgets | early bird privileges |
-      social rides
+      social rides | and more
 
 
-      Contacteer ons voor meer info!
+      Contacteer ons voor meer info! 
     gold: true
     height: '4'
     tagline: black & gold - just like your soul
