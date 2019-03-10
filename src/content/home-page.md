@@ -60,9 +60,9 @@ sections:
     title: Co-working
     width: '3'
   - contentEN: >-
-      unique cycling shirt + bibs by manuvèl + socks + cap | exclusive discounts
-      on selected items | free tickets | free gadgets | early bird privileges |
-      social rides | Manuvèl's loyalty program
+      Manuvèl's loyalty program | unique cycling shirt + bibs short + socks +
+      cap | exclusive discounts on selected items | free tickets | free gadgets
+      | early bird privileges | social rides | 
 
 
       More info to be announced soon! Please register for updates.
