@@ -343,6 +343,10 @@ const IndexPage = ({ data }) => {
                 Sunday <span>9h - 14h</span>
                 <br />
                 Monday <span>rest day</span>
+                <br />+{' '}
+                <OutboundLink href="https://www.facebook.com/pg/manuvel.be/events/">
+                  special events
+                </OutboundLink>
               </p>
               <p>
                 Stationsstraat 95
