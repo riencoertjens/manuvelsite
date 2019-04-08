@@ -328,15 +328,21 @@ const IndexPage = ({ data }) => {
               `}
             >
               <h2>contact</h2>
-              <p>
-                opening soon
-                {/* 
-                tue-fri: 8 - 16
+              <p
+                css={css`
+                  width: 150px;
+                  span {
+                    float: right;
+                  }
+                `}
+              >
+                Tue-Fri <span>8h - 18h</span>
                 <br />
-                sat-sun: 9 - 12
+                Saturday <span>9h - 18h</span>
                 <br />
-                monday = restday 
-                */}
+                Sunday <span>9h - 14h</span>
+                <br />
+                Monday <span>rest day</span>
               </p>
               <p>
                 Stationsstraat 95
