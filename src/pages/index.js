@@ -338,7 +338,7 @@ const IndexPage = ({ data }) => {
               >
                 Tue-Fri <span>8h - 18h</span>
                 <br />
-                Saturday <span>9h - 18h</span>
+                Saturday <span>9h - 17h</span>
                 <br />
                 Sunday <span>9h - 14h</span>
                 <br />
