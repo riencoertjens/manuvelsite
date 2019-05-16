@@ -362,7 +362,7 @@ const IndexPage = ({ data }) => {
                   }
                 `}
               >
-                {/* <Obfuscate tel="(+32)12/34 56 78" /> */}
+                <Obfuscate tel="(+32)03/689.44.34" />
                 <Obfuscate email="info@manuvel.be" />
               </p>
               <p>

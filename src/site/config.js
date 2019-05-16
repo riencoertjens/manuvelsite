@@ -8,7 +8,7 @@ const base = {
   twitter: `rien_coertjens`,
   instagram: `manuvel.be`,
   email: `info@manuvel.be`,
-  phone: `(+32)012 345 67 89`,
+  phone: `(+32)03/689.44.34`,
   facebookAppID: ``,
   facebookPage: ``,
   businessLocation: { lat: 51.16851, lng: 4.142393 },
