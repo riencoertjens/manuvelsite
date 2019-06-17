@@ -306,7 +306,7 @@ const IndexPage = ({ data }) => {
           </GeneratePosts>
           {/* contact */}
           <GridItem
-            width={6}
+            width={7}
             height={3}
             css={css`
               background: black;
@@ -320,51 +320,115 @@ const IndexPage = ({ data }) => {
             <div
               css={css`
                 padding: ${pxToRem(20)};
-                flex: 1 0 ${pxToRem(squareSize * 2)};
+                flex: 1 0 ${pxToRem(squareSize * 3)};
                 p {
                   margin-top: 0.75rem;
                   margin-bottom: 0;
                 }
+                td:nth-child(3),
+                td:nth-child(4) {
+                  text-align: right;
+                  padding-left: 0.25rem;
+                }
               `}
             >
               <h2>contact</h2>
-              <p
+              <table>
+                <tr>
+                  <td>Tue-Fri</td>
+                  <td>8h - 18h</td>
+                  <td>breakfast</td>
+                  <td>9h - 10h30</td>
+                </tr>
+                <tr>
+                  <td>Saturday</td>
+                  <td>9h - 17h</td>
+                  <td>lunch</td>
+                  <td>12h - 14h</td>
+                </tr>
+                <tr
+                  css={css`
+                    height: 1rem;
+                    td::after {
+                      display: block;
+                      content: '';
+                      background: ${colors.gold};
+                      width: 100%;
+                      height: 1px;
+                    }
+                  `}
+                >
+                  <td colSpan={4} />
+                </tr>
+                <tr>
+                  <td>Sunday</td>
+                  <td>9h - 13h</td>
+                  <td colSpan={2}>lazy breakfast until 12h</td>
+                </tr>
+                <tr
+                  css={css`
+                    height: 1rem;
+                    td::after {
+                      display: block;
+                      content: '';
+                      background: ${colors.gold};
+                      width: 100%;
+                      height: 1px;
+                    }
+                  `}
+                >
+                  <td colSpan={4} />
+                </tr>
+                <tr>
+                  <td>Monday</td>
+                  <td>rest day</td>
+                  <td colSpan={2}>
+                    +{' '}
+                    <OutboundLink href="https://www.facebook.com/pg/manuvel.be/events/">
+                      special events
+                    </OutboundLink>
+                  </td>
+                </tr>
+                <tr
+                  css={css`
+                    height: 1rem;
+                    td::after {
+                      display: block;
+                      content: '';
+                      background: ${colors.gold};
+                      width: 100%;
+                      height: 1px;
+                    }
+                  `}
+                >
+                  <td colSpan={2} />
+                </tr>
+              </table>
+
+              <div
                 css={css`
-                  width: 150px;
-                  span {
-                    float: right;
-                  }
+                  display: flex;
+                  justify-content: space-between;
                 `}
               >
-                Tue-Fri <span>8h - 18h</span>
-                <br />
-                Saturday <span>9h - 17h</span>
-                <br />
-                Sunday <span>9h - 14h</span>
-                <br />
-                Monday <span>rest day</span>
-                <br />+{' '}
-                <OutboundLink href="https://www.facebook.com/pg/manuvel.be/events/">
-                  special events
-                </OutboundLink>
-              </p>
-              <p>
-                Stationsstraat 95
-                <br />
-                9100 Sint Niklaas
-              </p>
-              <p
-                css={css`
-                  a {
-                    display: block !important;
-                    color: ${colors.gold};
-                    text-align: left;
-                  }
-                `}
-              >
-                <Obfuscate tel="(+32)03/689.44.34" />
-                <Obfuscate email="info@manuvel.be" />
-              </p>
+                <p>
+                  Stationsstraat 95
+                  <br />
+                  9100 Sint Niklaas
+                </p>
+                <p
+                  css={css`
+                    a {
+                      display: block !important;
+                      color: ${colors.gold};
+                      text-align: left;
+                    }
+                  `}
+                >
+                  <Obfuscate tel="(+32)03/689.44.34" />
+                  <Obfuscate email="info@manuvel.be" />
+                </p>
+              </div>
               <p>
                 <SocialLinks
                   {...data.site.socials}
@@ -380,7 +444,7 @@ const IndexPage = ({ data }) => {
               css={css`
                 background: ${colors.realGold};
                 position: relative;
-                flex: 1 0 ${pxToRem(squareSize * 4)};
+                flex: 1 0 ${pxToRem(squareSize * 3)};
                 min-height: ${pxToRem(squareSize * 3)};
               `}
             >
