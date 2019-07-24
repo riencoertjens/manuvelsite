@@ -330,9 +330,13 @@ const IndexPage = ({ data }) => {
                   text-align: right;
                   padding-left: 0.25rem;
                 }
+                h3 {
+                  font-size: 1.5rem;
+                }
               `}
             >
               <h2>contact</h2>
+              <h3>CLOSED FOR HOLIDAYS | July 25 - August 5</h3>
               <table>
                 <tr>
                   <td>Tue-Fri</td>
