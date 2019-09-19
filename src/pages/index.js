@@ -220,11 +220,11 @@ const IndexPage = ({ data }) => {
               <React.Fragment key={key}>
                 <GeneratePosts
                   posts={data.instaPosts.edges}
-                  count={2}
+                  count={4}
                   counter={instaPostCounter}
                   maxLikes={maxLikes}
                 >
-                  {(instaPostCounter += 2)}
+                  {(instaPostCounter += 4)}
                 </GeneratePosts>
                 <GridItem
                   width={section.width}
@@ -271,11 +271,11 @@ const IndexPage = ({ data }) => {
           })}
           <GeneratePosts
             posts={data.instaPosts.edges}
-            count={2}
+            count={4}
             counter={instaPostCounter}
             maxLikes={maxLikes}
           >
-            {(instaPostCounter += 2)}
+            {(instaPostCounter += 4)}
           </GeneratePosts>
           {/* register */}
           <GridItem
@@ -298,11 +298,11 @@ const IndexPage = ({ data }) => {
           </GridItem>
           <GeneratePosts
             posts={data.instaPosts.edges}
-            count={2}
+            count={4}
             counter={instaPostCounter}
             maxLikes={maxLikes}
           >
-            {(instaPostCounter += 2)}
+            {(instaPostCounter += 4)}
           </GeneratePosts>
           {/* contact */}
           <GridItem
@@ -477,11 +477,11 @@ const IndexPage = ({ data }) => {
           </GridItem>
           <GeneratePosts
             posts={data.instaPosts.edges}
-            count={2}
+            count={4}
             counter={instaPostCounter}
             maxLikes={maxLikes}
           >
-            {(instaPostCounter += 2)}
+            {(instaPostCounter += 4)}
           </GeneratePosts>
           {/* webhart */}
           <GridItem
@@ -511,11 +511,11 @@ const IndexPage = ({ data }) => {
           </GridItem>
           <GeneratePosts
             posts={data.instaPosts.edges}
-            count={2}
+            count={4}
             counter={instaPostCounter}
             maxLikes={maxLikes}
           >
-            {(instaPostCounter += 2)}
+            {(instaPostCounter += 4)}
           </GeneratePosts>
           {/* copy */}
           <GridItem
