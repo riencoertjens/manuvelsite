@@ -336,7 +336,6 @@ const IndexPage = ({ data }) => {
               `}
             >
               <h2>contact</h2>
-              <h3>CLOSED FOR HOLIDAYS | July 25 - August 5</h3>
               <table>
                 <tr>
                   <td>Tue-Fri</td>
