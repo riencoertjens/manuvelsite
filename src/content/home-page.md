@@ -2,6 +2,13 @@
 templateKey: home-page
 sections:
   - contentEN: >-
+    contentNL: >-
+    gold: true
+    height: '2'
+    tagline: Manuvèl heeft een herfstbreak van 29 oktober tot en met 4 november om ons de tijd te geven met nieuwe frisse ideeën op de proppen te komen
+    title: Autumn break
+    width: '8'
+  - contentEN: >-
       Enjoy your drink, a light snack, read a book or just score a piece of
       cake. We're pretty sure it's somebody's birthday somewhere in the world.
       Coffee powered by Rocket Espresso, ready for your liftoff.

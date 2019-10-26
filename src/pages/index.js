@@ -338,16 +338,7 @@ const IndexPage = ({ data }) => {
               <h2>contact</h2>
               <table>
                 <tr>
-                  <td>Tue-Fri</td>
-                  <td>8h - 18h</td>
-                  <td>breakfast</td>
-                  <td>9h - 10h30</td>
-                </tr>
-                <tr>
-                  <td>Saturday</td>
-                  <td>9h - 17h</td>
-                  <td>lunch</td>
-                  <td>12h - 14h</td>
+                  <td colSpan={4}>closed: Oct 29 - Nov 4</td>
                 </tr>
                 <tr
                   css={css`
@@ -364,9 +355,11 @@ const IndexPage = ({ data }) => {
                   <td colSpan={4} />
                 </tr>
                 <tr>
-                  <td>Sunday</td>
-                  <td>9h - 13h</td>
-                  <td colSpan={2}>lazy breakfast until 12h</td>
+                  <td colSpan={4}>
+                    Manuvèl heeft een herfstbreak van 29 oktober tot en met 4
+                    november om ons de tijd te geven met nieuwe frisse ideeën op
+                    de proppen te komen
+                  </td>
                 </tr>
                 <tr
                   css={css`
@@ -382,7 +375,7 @@ const IndexPage = ({ data }) => {
                 >
                   <td colSpan={4} />
                 </tr>
-                <tr>
+                {/* <tr>
                   <td>Monday</td>
                   <td>rest day</td>
                   <td colSpan={2}>
@@ -405,7 +398,7 @@ const IndexPage = ({ data }) => {
                   `}
                 >
                   <td colSpan={2} />
-                </tr>
+                </tr> */}
               </table>
 
               <div
