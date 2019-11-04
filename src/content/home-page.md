@@ -78,7 +78,7 @@ sections:
     tagline: black & gold - just like your soul
     title: Manuvèl Maniacs
     width: '3'
-  - contentEN: We'll keep you posted!  More info coming soon.
+  - contentEN: We'll keep you posted!  More info coming soon. Check our Facebook page .
     contentNL: Info volgt!
     gold: false
     height: '2'
