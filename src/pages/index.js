@@ -339,7 +339,7 @@ const IndexPage = ({ data }) => {
               <table>
                 <tr>
                   <td>Tue-Fri</td>
-                  <td>8h - 18h</td>
+                  <td>8h - 17h</td>
                   <td>breakfast</td>
                   <td>9h - 10h30</td>
                 </tr>
