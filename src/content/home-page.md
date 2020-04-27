@@ -20,7 +20,7 @@ sections:
     gold: true
     height: '3'
     tagline: You know you want it...
-    title: VISIT OUR WEBSHOP - Now online !
+    title: VISIT OUR WEBSHOP           Now online !
     width: '5'
   - contentEN: >-
       Take a look at our shop, unicorn bikes, cool accessories & gadgets. You
@@ -80,7 +80,7 @@ sections:
 
 
       Contacteer ons voor meer info! 
-    gold: true
+    gold: false
     height: '4'
     tagline: black & gold - just like your soul
     title: Manuvèl Maniacs
