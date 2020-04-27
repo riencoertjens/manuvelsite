@@ -37,7 +37,9 @@ sections:
     gold: true
     height: '3'
     tagline: You know you want it...
-    title: VISIT OUR WEBSHOP           Now online !
+    title: >-
+      VISIT OUR WEBSHOP                                                   Now
+      online !
     width: '5'
   - contentEN: >-
       Take a look at our shop, unicorn bikes, cool accessories & gadgets. You
