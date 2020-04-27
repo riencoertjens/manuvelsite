@@ -32,8 +32,8 @@ sections:
     tagline: always a good idea
     title: Food & Drinks
     width: '5'
-  - contentEN: 'https://manuvel-be.myshopify.com/'
-    contentNL: 'https://manuvel-be.myshopify.com/'
+  - contentEN: '<a href="https://manuvel-be.myshopify.com/">WEBSHOP MANUVÈL</a>'
+    contentNL: '<a href="https://manuvel-be.myshopify.com/">WEBSHOP MANUVÈL</a>'
     gold: true
     height: '3'
     tagline: You know you want it...
