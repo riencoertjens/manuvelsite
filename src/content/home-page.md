@@ -1,14 +1,22 @@
 ---
 templateKey: home-page
 sections:
-  - contentEN: Visit our new webshop . Now online !
-    contentNL: Bezoek onze nieuwe webshop . Nu online !
+  - contentEN: >-
+      Downside : Manuvèl will be closed until May 11th in compliance with
+      Belgian corona safety regulations . 
+
+
+      Upside : You can visit our new webshop . Now online !
+    contentNL: >-
+      Minder nieuws : Manuvèl zal gesloten zijn tot minstens 11 mei in navolging
+      van de Belgische corona maatregels .
+
+
+      Leuker nieuws : Bezoek onze nieuwe webshop . Nu online !
     gold: true
     height: '3'
-    tagline: '#besafe #stayhealthy #flattenthecurve'
-    title: >-
-      CORONA - COVID19 UPDATE : Manuvèl will be closed until May 11th in
-      compliance with Belgian corona safety regulations 
+    tagline: '#besafe #stayhealthy #flattenthecurve #handenwassen'
+    title: 'CORONA - COVID19 UPDATE '
     width: '3'
   - contentEN: >-
       Enjoy your drink, a light snack, read a book or just score a piece of
