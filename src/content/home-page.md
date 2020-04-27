@@ -92,5 +92,14 @@ sections:
     tagline: Open your mind.
     title: Special Events & Workshops
     width: '5'
+  - contentEN: Visit our new webshop . Now online !
+    contentNL: Bezoek onze nieuwe webshop . Nu online !
+    gold: true
+    height: '3'
+    tagline: '#besafe #stayhealthy #flattenthecurve'
+    title: >-
+      CORONA - COVID19 UPDATE : Manuvèl will be closed until May 11th in
+      compliance with Belgian corona safety regulations 
+    width: '3'
 ---
 
