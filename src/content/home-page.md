@@ -15,6 +15,13 @@ sections:
     tagline: always a good idea
     title: Food & Drinks
     width: '5'
+  - contentEN: 'https://manuvel-be.myshopify.com/'
+    contentNL: 'https://manuvel-be.myshopify.com/'
+    gold: true
+    height: '3'
+    tagline: You know you want it...
+    title: VISIT OUR WEBSHOP - Now online !
+    width: '5'
   - contentEN: >-
       Take a look at our shop, unicorn bikes, cool accessories & gadgets. You
       could give up shopping but we know you're not a quitter. You already
