@@ -255,16 +255,14 @@ const IndexPage = ({ data }) => {
                       color: ${section.isGold ? colors.grey : colors.lightGrey};
                       margin-bottom: 0;
                     `}
-                  >
-                    {section.contentNL}
-                  </p>
+                    dangerouslySetInnerHTML={{ __html: section.contentNL }}
+                  ></p>
                   <p
                     css={css`
                       font-style: italic;
                     `}
-                  >
-                    {section.content}
-                  </p>
+                    dangerouslySetInnerHTML={{ __html: section.content }}
+                  ></p>
                 </GridItem>
               </React.Fragment>
             )
