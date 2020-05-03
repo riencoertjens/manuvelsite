@@ -1,6 +1,13 @@
 ---
 templateKey: home-page
 sections:
+  - contentEN: '<a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>'
+    contentNL: '<a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>'
+    gold: true
+    height: '3'
+    tagline: You know you want it...
+    title: VISIT OUR WEBSHOP Now online !
+    width: '5'
   - contentEN: >-
       Downside : Manuvèl will be closed until May 11th in compliance with
       Belgian corona safety regulations . 
@@ -31,15 +38,6 @@ sections:
     height: '3'
     tagline: always a good idea
     title: Food & Drinks
-    width: '5'
-  - contentEN: '<a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>'
-    contentNL: '<a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>'
-    gold: true
-    height: '3'
-    tagline: You know you want it...
-    title: >-
-      VISIT OUR WEBSHOP
-      Now online !
     width: '5'
   - contentEN: >-
       Take a look at our shop, unicorn bikes, cool accessories & gadgets. You
