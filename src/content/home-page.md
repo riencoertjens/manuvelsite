@@ -9,13 +9,13 @@ sections:
     title: VISIT OUR WEBSHOP Now online !
     width: '5'
   - contentEN: >-
-      Downside : Manuvèl will be closed until May 11th in compliance with
+      Downside : Manuvèl will be closed until May 18th in compliance with
       Belgian corona safety regulations . 
 
 
       Upside : You can visit our new webshop . Now online !
     contentNL: >-
-      Minder nieuws : Manuvèl zal gesloten zijn tot minstens 11 mei in navolging
+      Minder nieuws : Manuvèl zal gesloten zijn tot minstens 18 mei in navolging
       van de Belgische corona maatregels .
 
 
