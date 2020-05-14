@@ -9,20 +9,22 @@ sections:
     title: VISIT OUR WEBSHOP Now online !
     width: '5'
   - contentEN: >-
-      Downside : Manuvèl will be closed until May 18th in compliance with
-      Belgian corona safety regulations . 
+      Downside : Manuvèl will be closed until June 8th in compliance with
+      Belgian corona safety regulations . UPDATE : Take-away service available
+      from 13th of May !!
 
 
       Upside : You can visit our new webshop . Now online !
     contentNL: >-
-      Minder nieuws : Manuvèl zal gesloten zijn tot minstens 18 mei in navolging
-      van de Belgische corona maatregels .
+      Minder nieuws : Manuvèl zal gesloten zijn tot minstens 8 juni in navolging
+      van de Belgische corona maatregels . UPDATE : Take-away service
+      beschikbaar vanaf 13 mei !!
 
 
       Leuker nieuws : Bezoek onze nieuwe webshop . Nu online !
     gold: true
     height: '3'
-    tagline: '#besafe #stayhealthy #flattenthecurve #handenwassen'
+    tagline: '#besafe #stayhealthy #flattenthecurve #handenwassen #takeawayonly'
     title: 'CORONA - COVID19 UPDATE '
     width: '3'
   - contentEN: >-
