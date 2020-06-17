@@ -40,10 +40,10 @@ sections:
   - contentEN: '<a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>'
     contentNL: '<a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>'
     gold: true
-    height: '3'
+    height: '2'
     tagline: You know you want it...
     title: VISIT OUR WEBSHOP Now online !
-    width: '4'
+    width: '3'
   - contentEN: >-
       Enjoy your drink, a light snack, read a book or just score a piece of
       cake. We're pretty sure it's somebody's birthday somewhere in the world.
