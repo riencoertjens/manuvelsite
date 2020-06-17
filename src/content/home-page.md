@@ -9,14 +9,14 @@ sections:
     title: VISIT OUR WEBSHOP Now online !
     width: '5'
   - contentEN: >-
-      Downside : Manuvèl will be closed until June 8th in compliance with
-      Belgian corona safety regulations . 
+      Downside : Manuvèl will adjust the opening hours strictly following Corona
+      Covid-19 safety regulations .
 
 
       Upside : You can visit our new webshop . Now online !
 
 
-      UPDATE : TAKE-AWAY SERVICE available from 13th of May !! 
+      UPDATE : OPENING HOURS DURING CORONA !!
 
       Wednesday to Friday from 14h-17h 
 
@@ -24,14 +24,14 @@ sections:
 
       Sunday 10h-14h .
     contentNL: >
-      Minder nieuws : Manuvèl zal gesloten zijn tot minstens 8 juni in navolging
+      Minder nieuws : Manuvèl zal de openingsuren aanpassen in strikte navolging
       van de Belgische corona maatregels . 
 
 
       Leuker nieuws : Bezoek onze nieuwe webshop . Nu online !
 
 
-      UPDATE : TAKE-AWAY SERVICE beschikbaar vanaf 13 mei !!
+      UPDATE : OPENINGSUREN TIJDENS CORONA MAATREGELS
 
       Woensdag tot vrijdag 14u - 17u
 
@@ -40,8 +40,10 @@ sections:
       Zondag 10u - 14u 
     gold: true
     height: '3'
-    tagline: '#besafe #stayhealthy #flattenthecurve #handenwassen #takeawayonly'
-    title: 'CORONA - COVID19 UPDATE '
+    tagline: >-
+      #besafe #stayhealthy #flattenthecurve #handenwassen #takeaway
+      #socialdistance #followtherules
+    title: '!! CORONA - COVID19 UPDATE !! AANGEPASTE OPENINGSUREN'
     width: '3'
   - contentEN: >-
       Enjoy your drink, a light snack, read a book or just score a piece of
