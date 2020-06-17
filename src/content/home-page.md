@@ -1,13 +1,6 @@
 ---
 templateKey: home-page
 sections:
-  - contentEN: '<a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>'
-    contentNL: '<a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>'
-    gold: true
-    height: '3'
-    tagline: You know you want it...
-    title: VISIT OUR WEBSHOP Now online !
-    width: '5'
   - contentEN: >-
       Downside : Manuvèl will adjust the opening hours strictly following Corona
       Covid-19 safety regulations .
@@ -45,6 +38,13 @@ sections:
       #socialdistance #followtherules
     title: '!! CORONA - COVID19 UPDATE !! AANGEPASTE OPENINGSUREN'
     width: '3'
+  - contentEN: '<a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>'
+    contentNL: '<a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>'
+    gold: true
+    height: '3'
+    tagline: You know you want it...
+    title: VISIT OUR WEBSHOP Now online !
+    width: '5'
   - contentEN: >-
       Enjoy your drink, a light snack, read a book or just score a piece of
       cake. We're pretty sure it's somebody's birthday somewhere in the world.
