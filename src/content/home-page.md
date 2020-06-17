@@ -36,7 +36,7 @@ sections:
       #besafe #stayhealthy #flattenthecurve #handenwassen #takeaway
       #socialdistance #followtherules
     title: CORONA - COVID19 UPDATE !! AANGEPASTE OPENINGSUREN !!
-    width: '2'
+    width: '4'
   - contentEN: '<a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>'
     contentNL: '<a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>'
     gold: true
