@@ -5,15 +5,14 @@ sections:
       Downside : Manuvèl will adjust the opening hours strictly following Corona
       Covid-19 safety regulations .
 
-
       Upside : You can visit our new webshop . Now online !
 
 
       UPDATE : OPENING HOURS DURING CORONA !!
 
-      Wednesday to Friday from 14h-17h 
+      Wednesday to Thursday 14h-17h 
 
-      Saturday 10h-17h
+      Friday-Saturday 10h-17h
 
       Sunday 10h-14h .
     contentNL: >
@@ -26,9 +25,9 @@ sections:
 
       UPDATE : OPENINGSUREN TIJDENS CORONA MAATREGELS
 
-      Woensdag tot vrijdag 14u - 17u
+      Woensdag - Donderdag 14u - 17u
 
-      Zaterdag 10u - 17u
+      Vrijdag - Zaterdag 10u - 17u
 
       Zondag 10u - 14u 
     gold: true
@@ -36,15 +35,15 @@ sections:
     tagline: >-
       #besafe #stayhealthy #flattenthecurve #handenwassen #takeaway
       #socialdistance #followtherules
-    title: '!! CORONA - COVID19 UPDATE !! AANGEPASTE OPENINGSUREN'
-    width: '3'
+    title: CORONA - COVID19 UPDATE !! AANGEPASTE OPENINGSUREN !!
+    width: '2'
   - contentEN: '<a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>'
     contentNL: '<a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>'
     gold: true
     height: '3'
     tagline: You know you want it...
     title: VISIT OUR WEBSHOP Now online !
-    width: '5'
+    width: '4'
   - contentEN: >-
       Enjoy your drink, a light snack, read a book or just score a piece of
       cake. We're pretty sure it's somebody's birthday somewhere in the world.
