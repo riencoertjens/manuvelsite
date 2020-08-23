@@ -35,7 +35,9 @@ sections:
     tagline: >-
       #besafe #stayhealthy #flattenthecurve #handenwassen #takeaway
       #socialdistance #followtherules
-    title: CORONA - COVID19 UPDATE !! AANGEPASTE OPENINGSUREN !!
+    title: >-
+      CORONA - COVID19 UPDATE !! SUMMER BREAK 19/08 - 28/08 !! BACK ON
+      SAT.29/08 
     width: '4'
   - contentEN: '<a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>'
     contentNL: '<a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>'
