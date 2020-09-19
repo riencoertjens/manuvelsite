@@ -8,9 +8,10 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `rien_coertjens`,
-        access_token: `${process.env.IG_ACCESS_TOKEN}`,
-        instagram_id: `${process.env.IG_ACCOUNT_ID}`,
+        // username: `manuvel.be`,
+        username: `7423792496`,
+        // access_token: `${process.env.IG_ACCESS_TOKEN}`,
+        // instagram_id: `${process.env.IG_ACCOUNT_ID}`,
       },
     },
     {

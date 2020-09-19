@@ -152,14 +152,19 @@ const InstaPost = ({ post, maxLikes }) => {
 }
 
 const GeneratePosts = ({ posts, count, counter, maxLikes }) => {
-  for (let i = 0; i < count; i++) {
-    if (posts.length > counter) {
-      return (
-        <InstaPost post={posts[counter].node} key={i} maxLikes={maxLikes} />
-      )
-    }
-    counter++
-  }
+  console.log(posts)
+  return <>
+    {posts.slice(counter, counter + count).map((post) => <InstaPost post={post.node} key={counter} maxLikes={maxLikes} />)}
+  </>
+  // for (let i = 0; i < count; i++) {
+  //   console.log(`${counter}_${i}`)
+  //   if (posts.length > counter) {
+  //     return (
+  //       <InstaPost post={posts[counter].node} key={i} maxLikes={maxLikes} />
+  //     )
+  //   }
+  //   counter++
+  // }
 }
 
 const IndexPage = ({ data }) => {
@@ -335,75 +340,77 @@ const IndexPage = ({ data }) => {
             >
               <h2>contact</h2>
               <table>
-                <tr>
-                  <td>Tue-Fri</td>
-                  <td>8h - 17h</td>
-                  <td>breakfast</td>
-                  <td>9h - 10h30</td>
-                </tr>
-                <tr>
-                  <td>Saturday</td>
-                  <td>9h - 17h</td>
-                  <td>lunch</td>
-                  <td>12h - 14h</td>
-                </tr>
-                <tr
-                  css={css`
-                    height: 1rem;
-                    td::after {
-                      display: block;
-                      content: '';
-                      background: ${colors.gold};
-                      width: 100%;
-                      height: 1px;
-                    }
-                  `}
-                >
-                  <td colSpan={4} />
-                </tr>
-                <tr>
-                  <td>Sunday</td>
-                  <td>9h - 13h</td>
-                  <td colSpan={2}>lazy breakfast until 12h</td>
-                </tr>
-                <tr
-                  css={css`
-                    height: 1rem;
-                    td::after {
-                      display: block;
-                      content: '';
-                      background: ${colors.gold};
-                      width: 100%;
-                      height: 1px;
-                    }
-                  `}
-                >
-                  <td colSpan={4} />
-                </tr>
-                <tr>
-                  <td>Monday</td>
-                  <td>rest day</td>
-                  <td colSpan={2}>
-                    +{' '}
-                    <OutboundLink href="https://www.facebook.com/pg/manuvel.be/events/">
-                      special events
-                    </OutboundLink>
-                  </td>
-                </tr>
-                <tr
-                  css={css`
-                    height: 1rem;
-                    td::after {
-                      display: block;
-                      content: '';
-                      background: ${colors.gold};
-                      width: 100%;
-                      height: 1px;
-                    }
-                  `}
-                >
-                  <td colSpan={2} />
-                </tr>
+                <tbody>
+                  <tr>
+                    <td>Tue-Fri</td>
+                    <td>8h - 17h</td>
+                    <td>breakfast</td>
+                    <td>9h - 10h30</td>
+                  </tr>
+                  <tr>
+                    <td>Saturday</td>
+                    <td>9h - 17h</td>
+                    <td>lunch</td>
+                    <td>12h - 14h</td>
+                  </tr>
+                  <tr
+                    css={css`
+                      height: 1rem;
+                      td::after {
+                        display: block;
+                        content: '';
+                        background: ${colors.gold};
+                        width: 100%;
+                        height: 1px;
+                      }
+                    `}
+                  >
+                    <td colSpan={4} />
+                  </tr>
+                  <tr>
+                    <td>Sunday</td>
+                    <td>9h - 13h</td>
+                    <td colSpan={2}>lazy breakfast until 12h</td>
+                  </tr>
+                  <tr
+                    css={css`
+                      height: 1rem;
+                      td::after {
+                        display: block;
+                        content: '';
+                        background: ${colors.gold};
+                        width: 100%;
+                        height: 1px;
+                      }
+                    `}
+                  >
+                    <td colSpan={4} />
+                  </tr>
+                  <tr>
+                    <td>Monday</td>
+                    <td>rest day</td>
+                    <td colSpan={2}>
+                      +{' '}
+                      <OutboundLink href="https://www.facebook.com/pg/manuvel.be/events/">
+                        special events
+                      </OutboundLink>
+                    </td>
+                  </tr>
+                  <tr
+                    css={css`
+                      height: 1rem;
+                      td::after {
+                        display: block;
+                        content: '';
+                        background: ${colors.gold};
+                        width: 100%;
+                        height: 1px;
+                      }
+                    `}
+                  >
+                    <td colSpan={2} />
+                  </tr>
+                </tbody>
               </table>
 
               <div
