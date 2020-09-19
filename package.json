@@ -15,6 +15,9 @@
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
+  "engines": {
+    "node": ">=10"
+  },
   "devDependencies": {
     "prettier": "^2.1.2"
   },

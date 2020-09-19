@@ -152,7 +152,6 @@ const InstaPost = ({ post, maxLikes }) => {
 }
 
 const GeneratePosts = ({ posts, count, counter, maxLikes }) => {
-  console.log(posts)
   return <>
     {posts.slice(counter, counter + count).map((post) => <InstaPost post={post.node} key={counter} maxLikes={maxLikes} />)}
   </>
