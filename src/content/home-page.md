@@ -2,8 +2,10 @@
 templateKey: home-page
 sections:
   - contentEN: >-
-      Downside : Manuvèl will adjust the opening hours strictly following Corona
-      Covid-19 safety regulations .
+      Downside : 
+
+      Manuvèl will adjust the opening hours strictly following Corona Covid-19 safety regulations .
+
 
       Upside : You can visit our new webshop . Now online !
 
