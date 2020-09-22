@@ -30,19 +30,19 @@ const borderRadius = 7.5 //px
 const GridWrap = styled('div')`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(${pxToRem(squareSize)}, 1fr));
-  grid-gap: ${props => props.gap || pxToRem(10)};
-  padding: ${props => props.gap || pxToRem(10)};
+  grid-gap: ${(props) => props.gap || pxToRem(10)};
+  padding: ${(props) => props.gap || pxToRem(10)};
   grid-auto-rows: minmax(${pxToRem(squareSize)}, auto);
   grid-auto-flow: dense;
 `
 
 const GridItem = styled('div')`
   overflow: hidden;
-  ${props => `
+  ${(props) => `
       grid-column-end: span ${props.width || 1};
       grid-row-end: span ${props.height || 1};
     `}
-  @media (max-width: ${props => props.width * squareSize}px) {
+  @media (max-width: ${(props) => props.width * squareSize}px) {
     grid-column: 1/-1;
   }
 `
@@ -152,9 +152,13 @@ const InstaPost = ({ post, maxLikes }) => {
 }
 
 const GeneratePosts = ({ posts, count, counter, maxLikes }) => {
-  return <>
-    {posts.slice(counter, counter + count).map((post) => <InstaPost post={post.node} key={counter} maxLikes={maxLikes} />)}
-  </>
+  return (
+    <>
+      {posts.slice(counter, counter + count).map((post) => (
+        <InstaPost post={post.node} key={counter} maxLikes={maxLikes} />
+      ))}
+    </>
+  )
   // for (let i = 0; i < count; i++) {
   //   console.log(`${counter}_${i}`)
   //   if (posts.length > counter) {
@@ -341,17 +345,17 @@ const IndexPage = ({ data }) => {
               <table>
                 <tbody>
                   <tr>
-                    <td>Tue-Fri</td>
-                    <td>8h - 17h</td>
-                    <td>breakfast</td>
-                    <td>9h - 10h30</td>
+                    <td>Mon-Tue</td>
+                    <td>closed</td>
+                    <td>Wed-Sat</td>
+                    <td>10h - 17h</td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <td>Saturday</td>
                     <td>9h - 17h</td>
                     <td>lunch</td>
                     <td>12h - 14h</td>
-                  </tr>
+                  </tr> */}
                   <tr
                     css={css`
                       height: 1rem;
@@ -368,7 +372,7 @@ const IndexPage = ({ data }) => {
                   </tr>
                   <tr>
                     <td>Sunday</td>
-                    <td>9h - 13h</td>
+                    <td>10h - 14h</td>
                     <td colSpan={2}>lazy breakfast until 12h</td>
                   </tr>
                   <tr
@@ -386,28 +390,14 @@ const IndexPage = ({ data }) => {
                     <td colSpan={4} />
                   </tr>
                   <tr>
-                    <td>Monday</td>
-                    <td>rest day</td>
+                    <td></td>
+                    <td></td>
                     <td colSpan={2}>
                       +{' '}
                       <OutboundLink href="https://www.facebook.com/pg/manuvel.be/events/">
                         special events
                       </OutboundLink>
                     </td>
-                  </tr>
-                  <tr
-                    css={css`
-                      height: 1rem;
-                      td::after {
-                        display: block;
-                        content: '';
-                        background: ${colors.gold};
-                        width: 100%;
-                        height: 1px;
-                      }
-                    `}
-                  >
-                    <td colSpan={2} />
                   </tr>
                 </tbody>
               </table>
@@ -494,7 +484,7 @@ const IndexPage = ({ data }) => {
             href="https://www.web-hart.com"
             css={css`
               background: ${colors.blue};
-              color: #FF8C00;//${colors.gold};
+              color: #ff8c00; //${colors.gold};
               display: flex;
               flex-direction: column;
               align-items: center;
@@ -505,7 +495,7 @@ const IndexPage = ({ data }) => {
                 max-width: 85%;
                 height: auto;
               }
-              span{
+              span {
                 font-size: ${pxToRem(12)};
               }
             `}
