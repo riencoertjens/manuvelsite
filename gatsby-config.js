@@ -10,8 +10,8 @@ module.exports = {
       options: {
         // username: `manuvel.be`,
         username: `7423792496`,
-        // access_token: `${process.env.IG_ACCESS_TOKEN}`,
-        // instagram_id: `${process.env.IG_ACCOUNT_ID}`,
+        access_token: `${process.env.IG_ACCESS_TOKEN}`,
+        instagram_id: `${process.env.IG_ACCOUNT_ID}`,
       },
     },
     {
