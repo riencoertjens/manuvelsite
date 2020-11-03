@@ -10,15 +10,15 @@ sections:
       Upside : You can visit our new webshop . Now online !
 
 
-      UPDATE : OPENING HOURS DURING NEW CORONA-LOCKDOWN !! 
+      UPDATE : OPENING HOURS DURING NEW CORONA-LOCKDOWN NOVEMBER !! 
 
       CHECK OUR FB- AND INSTA-PAGE FOR LIVE UPDATES !!
 
       TAKE-AWAY ONLY !! 
 
-      (Wednesday to Saturday 10h-17h) check our pages !
+      (Wednesday to Saturday 14h-17h) check our pages !
 
-      (Sunday 10h-14h) check our pages !
+      (Sunday 10h-13h) check our pages !
     contentNL: >
       Minder nieuws : Manuvèl zal de openingsuren aanpassen in strikte navolging
       van de Belgische corona maatregels . 
@@ -27,20 +27,20 @@ sections:
       Leuker nieuws : Bezoek onze nieuwe webshop . Nu online !
 
 
-      UPDATE : OPENINGSUREN TIJDENS CORONA-LOCKDOWN !!
+      UPDATE : OPENINGSUREN TIJDENS CORONA-LOCKDOWN NOVEMBER !!
 
       CHECK ONZE FB - EN INSTA-PAGINA VOOR LIVE UPDATES !!
 
       ENKEL TAKE-AWAY !!
 
-      (Woensdag tot Zaterdag 10u - 17u)
+      (Woensdag tot Zaterdag 14u - 17u)
 
-      (Zondag 10u - 14u) 
+      (Zondag 10u - 13u) 
     gold: true
     height: "3"
     tagline: "#besafe #stayhealthy #flattenthecurve #handenwassen #takeaway
       #socialdistance #followtherules"
-    title: CORONA - COVID19 UPDATE !! NEW LOCKDOWN 19th Oct. / Oktober !!
+    title: CORONA - COVID19 UPDATE !! NEW LOCKDOWN 02th November !!
     width: "4"
   - contentEN: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
     contentNL: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
