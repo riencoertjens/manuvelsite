@@ -106,7 +106,10 @@ sections:
       | early bird privileges | social rides | and more
 
 
-      More info to be announced soon! Please register for updates.
+      More info to be announced soon! Please register for updates
+
+
+      <iframe allowtransparency frameborder='0' height='454' scrolling='no' src='https://www.strava.com/clubs/624249/latest-rides/819c7bbf56366b2d5a42ec2b0cc6f7f129573c8c?show_rides=true' width='300'></iframe>
     contentNL: >-
       Manuvèl's loyalty program | unique cycling shirt + bibs short + socks +
       cap | exclusive discounts on selected items | free tickets | free gadgets
