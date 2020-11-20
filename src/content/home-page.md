@@ -4,7 +4,7 @@ sections:
   - contentEN: >-
       Downside : 
 
-      Manuvèl will adjust the opening hours strictly following Corona Covid-19 safety regulations .
+      Manuvèl will close strictly following Corona Covid-19 safety regulations . Take-away will be possible on selected opening hours.
 
 
       Upside : You can visit our new webshop . Now online !
@@ -20,8 +20,9 @@ sections:
 
       (Sunday 10h-13h) check our pages !
     contentNL: >
-      Minder nieuws : Manuvèl zal de openingsuren aanpassen in strikte navolging
-      van de Belgische corona maatregels . 
+      Minder nieuws : Manuvèl zal sluiten in strikte navolging van de Belgische
+      corona maatregels . Take-away zal wel mogelijk blijven tijdens
+      geselecteerde uren .
 
 
       Leuker nieuws : Bezoek onze nieuwe webshop . Nu online !
