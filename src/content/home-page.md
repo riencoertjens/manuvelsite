@@ -101,16 +101,13 @@ sections:
     tagline: work space / meeting room
     title: Co-working
     width: "3"
-  - contentEN: >-
+  - contentEN: >
       Manuvèl's loyalty program | unique cycling shirt + bibs short + socks +
       cap | exclusive discounts on selected items | free tickets | free gadgets
       | early bird privileges | social rides | and more
 
 
-      More info to be announced soon! Please register for updates
-
-
-      <iframe allowtransparency frameborder='0' height='160' scrolling='no' src='https://www.strava.com/clubs/624249/latest-rides/819c7bbf56366b2d5a42ec2b0cc6f7f129573c8c?show_rides=false' width='300'></iframe>
+      More info to be announced soon! Please register for updates !
     contentNL: >-
       Manuvèl's loyalty program | unique cycling shirt + bibs short + socks +
       cap | exclusive discounts on selected items | free tickets | free gadgets
