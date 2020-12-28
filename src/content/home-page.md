@@ -1,7 +1,7 @@
 ---
 templateKey: home-page
 sections:
-  - contentEN: >-
+  - contentEN: >
       Downside : 
 
       Manuvèl will close strictly following Corona Covid-19 safety regulations . Take-away will be possible on selected opening hours.
@@ -10,16 +10,12 @@ sections:
       Upside : You can visit our new webshop . Now online !
 
 
-      UPDATE : OPENING HOURS DURING NEW CORONA-LOCKDOWN NOVEMBER !! 
+      UPDATE : OPENING HOURS DURING NEW CORONA-LOCKDOWN !! 
 
       CHECK OUR FB- AND INSTA-PAGE FOR LIVE UPDATES !!
 
       TAKE-AWAY ONLY !! 
-
-      (Wednesday to Saturday 14h-17h) check our pages !
-
-      (Sunday 10h-13h) check our pages !
-    contentNL: >
+    contentNL: >+
       Minder nieuws : Manuvèl zal sluiten in strikte navolging van de Belgische
       corona maatregels . Take-away zal wel mogelijk blijven tijdens
       geselecteerde uren .
@@ -28,15 +24,12 @@ sections:
       Leuker nieuws : Bezoek onze nieuwe webshop . Nu online !
 
 
-      UPDATE : OPENINGSUREN TIJDENS CORONA-LOCKDOWN NOVEMBER !!
+      UPDATE : OPENINGSUREN TIJDENS CORONA-LOCKDOWN  !!
 
       CHECK ONZE FB - EN INSTA-PAGINA VOOR LIVE UPDATES !!
 
       ENKEL TAKE-AWAY !!
 
-      (Woensdag tot Zaterdag 14u - 17u)
-
-      (Zondag 10u - 13u) 
     gold: true
     height: "3"
     tagline: "#besafe #stayhealthy #flattenthecurve #handenwassen #takeaway
@@ -45,7 +38,7 @@ sections:
     width: "4"
   - contentEN: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
     contentNL: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
-    gold: true
+    gold: false
     height: "2"
     tagline: You know you want it...
     title: VISIT OUR WEBSHOP Now online !
