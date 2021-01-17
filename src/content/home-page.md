@@ -34,7 +34,7 @@ sections:
     height: "3"
     tagline: "#besafe #stayhealthy #flattenthecurve #handenwassen #takeaway
       #socialdistance #followtherules"
-    title: CORONA - COVID19 UPDATE !! NEW LOCKDOWN 02th November !!
+    title: "CORONA - COVID19 UPDATE !! "
     width: "4"
   - contentEN: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
     contentNL: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
