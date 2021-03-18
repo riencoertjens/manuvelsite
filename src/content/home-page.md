@@ -35,7 +35,7 @@ sections:
     tagline: "#besafe #stayhealthy #flattenthecurve #handenwassen #takeaway
       #socialdistance #followtherules"
     title: CORONA - COVID19 UPDATE !! OPENINGSUREN / OPENING HOURS
-    width: 5
+    width: "5"
   - contentEN: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
     contentNL: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
     gold: false
