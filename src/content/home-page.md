@@ -1,34 +1,16 @@
 ---
 templateKey: home-page
 sections:
-  - contentEN: >
-      Downside : 
-
-      Manuvèl will close strictly following Corona Covid-19 safety regulations . Take-away will be possible on selected opening hours.
-
-
-      Upside : You can visit our new webshop . Now online !
+  - contentEN: >+
+      Newsflash !!  : Following new corona safety regulations , Manuvèl will
+      re-open regular services on Wednesday 9/06 ! Take-away still @ your
+      service
 
 
-      UPDATE : OPENING HOURS DURING NEW CORONA-LOCKDOWN !! 
-
-      CHECK OUR FB- AND INSTA-PAGE FOR LIVE UPDATES !!
-
-      TAKE-AWAY ONLY !! 
     contentNL: >+
-      Minder nieuws : Manuvèl zal sluiten in strikte navolging van de Belgische
-      corona maatregels . Take-away zal wel mogelijk blijven tijdens
-      geselecteerde uren .
-
-
-      Leuker nieuws : Bezoek onze nieuwe webshop . Nu online !
-
-
-      UPDATE : OPENINGSUREN TIJDENS CORONA-LOCKDOWN  !!
-
-      CHECK ONZE FB - EN INSTA-PAGINA VOOR LIVE UPDATES !!
-
-      ENKEL TAKE-AWAY !!
+      Nieuwsflash !! : Manuvèl zal op woensdag 9 juni volledig heropenen mits
+      inachtname van de nieuwe corona veilgheidsmaatregelen ! Take-away nog
+      steeds @ your service
 
     gold: true
     height: "3"
@@ -100,21 +82,22 @@ sections:
       | early bird privileges | social rides | and more
 
 
-      More info to be announced soon! Please register for updates !
+      Our all-new Manuvèl outfit is ready to be the best training partner you ever had !! Check our webshop for all details , prices & possibilities
     contentNL: >-
       Manuvèl's loyalty program | unique cycling shirt + bibs short + socks +
       cap | exclusive discounts on selected items | free tickets | free gadgets
       | early bird privileges | social rides | and more
 
 
-      Contacteer ons voor meer info! 
+      Onze gloednieuwe Manuvèl outfit is er klaar voor om jouw beste trainingspartner ooit te worden !! Check onze webshop voor alle details,prijzen en mogelijkheden
     gold: false
     height: "4"
     tagline: black & gold - just like your soul
     title: Manuvèl Maniacs
     width: "3"
-  - contentEN: We'll keep you posted!  More info coming soon. Check our Facebook page .
-    contentNL: Info volgt!
+  - contentEN: "Check our Facebook page for info and upcoming events ! "
+    contentNL: Alle info kan je via onze Facebook pagina en eventpagina's
+      terugvinden . Check it out !
     gold: false
     height: "2"
     tagline: Open your mind.
