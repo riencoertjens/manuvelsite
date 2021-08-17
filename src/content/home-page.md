@@ -10,14 +10,14 @@ sections:
     height: "3"
     tagline: "16/08 - 31/08"
     title: SUMMER BREAK
-    width: "5"
+    width: "4"
   - contentEN: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
     contentNL: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
     gold: false
-    height: "2"
+    height: "1"
     tagline: You know you want it...
     title: VISIT OUR WEBSHOP Now online !
-    width: "3"
+    width: "6"
   - contentEN: Enjoy your drink, a light snack, read a book or just score a piece of
       cake. We're pretty sure it's somebody's birthday somewhere in the world.
       Coffee powered by Rocket Espresso, ready for your liftoff.
