@@ -2,21 +2,14 @@
 templateKey: home-page
 sections:
   - contentEN: >+
-      Newsflash !!  : Following new corona safety regulations , Manuvèl will
-      re-open regular services on Wednesday 9/06 ! Take-away still @ your
-      service
-
-
+      From August 16 to 31 Manuvel will be closed for some well needed
+      sanity maintainance work. We will be back on September 1st
     contentNL: >+
-      Nieuwsflash !! : Manuvèl zal op woensdag 9 juni volledig heropenen mits
-      inachtname van de nieuwe corona veilgheidsmaatregelen ! Take-away nog
-      steeds @ your service
-
+      Van 16 tot en met 31 augustus is Manuvel gesloten voor dringend geestelijk onderhoud. Op 1 september zijn we weer terug.
     gold: true
     height: "3"
-    tagline: "#besafe #stayhealthy #flattenthecurve #handenwassen #takeaway
-      #socialdistance #followtherules"
-    title: CORONA - COVID19 UPDATE !! OPENINGSUREN / OPENING HOURS
+    tagline: "16/08 - 31/08"
+    title: SUMMER BREAK
     width: "5"
   - contentEN: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
     contentNL: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
