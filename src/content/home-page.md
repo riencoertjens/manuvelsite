@@ -11,7 +11,7 @@ sections:
       (*) Please contact us for group ride collabs for your event or organisation ! 
 
 
-    contentNL: >
+    contentNL: >+
       Iedereen welkom voor onze Social Rides ! We spreken af @Manuvèl voor een
       mooie , gegidste rit , afstanden en groepssamenstelling kunnen variëren
       (check onze Facebook event pagina!) . Nadien blijft Manuvèl open voor een
@@ -19,6 +19,7 @@ sections:
 
 
       (*) Contacteer ons voor een georganiseerde groepsrit voor jouw event of organisatie !
+
     gold: true
     height: "3"
     tagline: 09/09 18u30
