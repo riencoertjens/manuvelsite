@@ -20,7 +20,7 @@ sections:
     gold: true
     height: "3"
     tagline: 09/09 18u30
-    title: SOCIAL RIDES !
+    title: "SOCIAL RIDES "
     width: "4"
   - contentEN: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
     contentNL: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
