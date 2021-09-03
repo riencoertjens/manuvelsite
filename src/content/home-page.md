@@ -1,15 +1,18 @@
 ---
 templateKey: home-page
 sections:
-  - contentEN: >+
-      From August 16 to 31 Manuvel will be closed for some well needed
-      sanity maintainance work. We will be back on September 1st
-    contentNL: >+
-      Van 16 tot en met 31 augustus is Manuvel gesloten voor dringend geestelijk onderhoud. Op 1 september zijn we weer terug.
+  - contentEN: >
+      Join our Social Rides ! We meet @Manuvèl for a nice guided ride , distance
+      app. 70kms (30-32km/h AVG ) . Afterwards we meet again ..for drinks &
+      laughter ;-) . See you soon ?
+    contentNL: >
+      Iedereen welkom voor onze Social Rides ! We spreken af @Manuvèl voor een
+      mooie , gegidste rit (afst. ongeveer 70km , gemid.. 30-32km/h) .  Nadien
+      blijft Manuvèl open voor een 'après-bike' ;-) . Tot dan ?
     gold: true
     height: "3"
-    tagline: "16/08 - 31/08"
-    title: SUMMER BREAK
+    tagline: 09/09 18u30
+    title: SOCIAL RIDES !
     width: "4"
   - contentEN: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
     contentNL: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
