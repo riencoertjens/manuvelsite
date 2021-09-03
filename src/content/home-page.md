@@ -1,7 +1,7 @@
 ---
 templateKey: home-page
 sections:
-  - contentEN: >
+  - contentEN: >+
       Join our Social Rides ! We meet @Manuvèl for a nice guided ride ,
       distances and groups can vary (check our Facebook event page!)
       .  Afterwards we meet again ..for drinks & laughter ;-) . See you soon ?
@@ -9,6 +9,8 @@ sections:
 
 
       (*) Please contact us for group ride collabs for your event or organisation ! 
+
+
     contentNL: >
       Iedereen welkom voor onze Social Rides ! We spreken af @Manuvèl voor een
       mooie , gegidste rit , afstanden en groepssamenstelling kunnen variëren
