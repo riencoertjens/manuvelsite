@@ -1,82 +1,66 @@
 backend:
-  # name: test-repo
   name: git-gateway
-  branch: master
+  branch: main # Branch to update (optional; defaults to master)
+local_backend: true
 
-media_folder: static/netlify-uploads
-public_folder: netlify-uploads
+media_folder: static/img
+public_folder: /img
 
 collections:
-  - name: 'pages'
-    label: 'Pages'
-    files:
-      - file: 'src/content/home-page.md'
-        label: 'Home'
-        name: 'home'
-        editor:
-          preview: false
-        fields: [
-          {
-            label: 'Template Key',
-            name: 'templateKey',
-            widget: 'hidden',
-            default: 'home-page',
-          },
-          {
-            label: Sections,
-            name: sections,
-            widget: list,
-            fields: [
-              { label: Title, name: title, widget: string },
-              { label: Tagline, name: tagline, widget: string },
-              { label: Gold, name: gold, widget: boolean, default: false },
-              { label: Width, name: width, widget: number, default: 6 },
-              { label: height, name: height, widget: number, default: 3 },
-              {
-                label: Content(EN),
-                name: contentEN,
-                widget: text,
-              },
-              {
-                label: Content(NL),
-                name: contentNL,
-                widget: text,
-              },
+  - name: 'locations'
+    label: 'Locations'
+    folder: 'src/content/locations'
+    create: true
+    editor:
+      preview: false
+    fields:
+      [
+        { label: Title, name: title, widget: string },
+        {
+          label: 'Address',
+          name: 'address',
+          widget: 'object',
+          collapsed: true,
+          summary: '{{fields.street}}, {{fields.post-code}} {{fields.city}}',
+          fields:
+            [
+              { label: 'Street + Number', name: 'street', widget: 'string' },
+              { label: 'City', name: 'city', widget: 'string' },
+              { label: 'Postal Code', name: 'post-code', widget: 'string' },
             ],
-          },
-        ]
-  # - name: 'posts'
-  #   label: 'Blog'
-  #   folder: 'src/content/blog'
-  #   create: true
-  #   slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-  #   fields:
-  #     - {
-  #         label: 'Template Key',
-  #         name: 'templateKey',
-  #         widget: 'hidden',
-  #         default: 'post',
-  #       }
-  #     - { label: 'Image', name: 'image', widget: 'image' }
-  #     - { label: 'Title', name: 'title', widget: 'string' }
-  #     - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-  #     - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
-  #     - {
-  #         label: 'Featured',
-  #         name: 'featured',
-  #         widget: 'boolean',
-  #         default: false,
-  #       }
-  #     - {
-  #         label: 'Show on pages',
-  #         name: 'pages',
-  #         widget: 'select',
-  #         multiple: true,
-  #         options: [
-  #           'about',
-  #           'partners',
-  #           'calendar',
-  #         ],
-  #       }
-  #     - { label: 'Tags (comma seperated)', name: 'tags', widget: 'list', required: false }
-  #     - { label: 'Body', name: 'body', widget: 'markdown' }
+        },
+        {
+          label: 'Sections',
+          name: 'sections',
+          widget: 'list',
+          minimize_collapsed: false,
+          summary: '{{section}}',
+          add_to_top: true,
+          field:
+            {
+              label: 'Section',
+              name: 'section',
+              widget: 'relation',
+              collection: 'sections',
+              value_field: '{{slug}}',
+              display_fields: ['{{title}}'],
+              search_fields: ['title'],
+            },
+        },
+      ]
+  - name: 'sections'
+    label: 'Sections'
+    folder: 'src/content/sections'
+    editor:
+      preview: false
+    create: true
+    fields:
+      [
+        { label: Title, name: title, widget: string },
+        { label: Tagline, name: tagline, widget: string },
+        { label: Gold, name: gold, widget: boolean, default: false },
+        { label: Width, name: width, widget: number, default: 6 },
+        { label: height, name: height, widget: number, default: 3 },
+        { label: Content(EN), name: contentEN, widget: markdown },
+        { label: Content(NL), name: contentNL, widget: markdown },
+      ]

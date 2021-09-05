@@ -67,6 +67,7 @@
     "react-google-maps": "^9.4.5",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.3.0",
+    "react-markdown": "^7.0.1",
     "react-obfuscate": "^3.6.7",
     "react-typography": "^0.16.18",
     "typeface-raleway": "^0.0.75",
