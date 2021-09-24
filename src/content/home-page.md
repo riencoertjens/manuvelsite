@@ -4,8 +4,7 @@ sections:
   - contentEN: >+
       Join our Social Rides ! We meet @Manuvèl for a nice guided ride ,
       distances and groups can vary (check our Facebook event page!)
-      .  Afterwards we meet again ..for drinks & laughter ;-) . See you soon ?
-      (*)
+      .  Afterwards we meet again ..for drinks & laughter ;-) . See you soon ? 
 
 
       (*) Please contact us for group ride collabs for your event or organisation ! 
@@ -15,14 +14,14 @@ sections:
       Iedereen welkom voor onze Social Rides ! We spreken af @Manuvèl voor een
       mooie , gegidste rit , afstanden en groepssamenstelling kunnen variëren
       (check onze Facebook event pagina!) . Nadien blijft Manuvèl open voor een
-      'après-bike' ;-) . Tot dan ? (*)
+      'après-bike' ;-) . Tot dan ? 
 
 
-      (*) Contacteer ons voor een georganiseerde groepsrit voor jouw event of organisatie !
+      (*) CONTACTEER ONS VOOR EEN 'SOCIAL RIDE' VOOR JOUW EIGEN EVENT OF ORGANISATIE !
 
     gold: true
     height: "3"
-    tagline: 09/09 18u30
+    tagline: Join us !
     title: "SOCIAL RIDES "
     width: "4"
   - contentEN: <a href="https://manuvel-be.myshopify.com">WEBSHOP MANUVÈL</a>
