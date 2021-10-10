@@ -1,4 +1,5 @@
 export default [
   { path: '/classic', name: '(Sint-Niklaas)' },
-  { path: '/connect', name: 'Connect (Temse)' },
+  { path: '/coming-soon', name: 'Connect (Temse)' },
+  // { path: '/connect', name: 'Connect (Temse)' },
 ]
