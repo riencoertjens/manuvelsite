@@ -59,7 +59,17 @@ const IndexPage = () => {
             `}
           />
         </div>
-        <div>
+        <div
+          css={css`
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            * + * {
+              margin: 1rem;
+            }
+          `}
+        >
           {PAGES.map((page) => (
             <GatsbyLink
               to={page.path}
@@ -69,9 +79,6 @@ const IndexPage = () => {
                 border-bottom-left-radius: 12px;
                 border-top-right-radius: 12px;
                 color: black;
-                & + & {
-                  margin-left: 2rem;
-                }
               `}
             >
               Go To Manuvèl {page.name}
