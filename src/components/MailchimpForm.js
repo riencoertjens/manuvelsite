@@ -5,14 +5,13 @@ import { OutboundLink, pxToRem } from './webhart-components'
 import { colors } from '../site/styles'
 
 export default class MailchimpForm extends React.Component {
-  // 1. via `.then`
   constructor(props) {
     super(props)
     this.state = { popUp: false }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault()
     const form = e.target
     if (form.subscribe) {
@@ -22,7 +21,7 @@ export default class MailchimpForm extends React.Component {
         POSTCODE: form.zip.value,
       }
       addToMailchimp(email, listFields) // listFields are optional if you are only capturing the email address.
-        .then(data => {
+        .then((data) => {
           form.reset()
           // I recommend setting data to React state
           // but you can do whatever you want (including ignoring this `then()` altogether)
@@ -113,7 +112,6 @@ export default class MailchimpForm extends React.Component {
               background: rgba(0, 0, 0, 0.75);
             `}
           >
-            //popup overlay
             <div //popup content
               css={css`
                 position: fixed;
@@ -136,7 +134,7 @@ export default class MailchimpForm extends React.Component {
                   padding: ${pxToRem(2)} ${pxToRem(10)};
                   ${popUp.result === 'error' && `background: ${colors.red};`}
                   ${popUp.result === 'success' &&
-                    `background: ${colors.green};`}
+                  `background: ${colors.green};`}
                 }
                 max-width: 90%;
                 border-radius: ${pxToRem(15)};

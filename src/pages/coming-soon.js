@@ -7,15 +7,14 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Layout from '../components/layout'
 import { Hero } from '../components/webhart-components'
 
-import LogoSVG from '../images/svg/logo.svg'
 import { colors } from '../site/styles'
-import PAGES from '../site/pages'
 
-const IndexPage = () => {
+const ComingSoonPage = () => {
   const data = useStaticQuery(graphql`
-    query IndexPageQuery {
+    query ComingSoonPageQuery {
       headerImage: file(
-        base: { eq: "social-image.jpg" } # sourceInstanceName: { eq: "images" }
+        base: { eq: "coming-soon.jpg" }
+        sourceInstanceName: { eq: "images" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1800) {
@@ -49,45 +48,33 @@ const IndexPage = () => {
             zIndex: -1,
           }}
         />
+
         <div>
-          <img
-            alt="logo"
-            src={LogoSVG}
+          <h1
             css={css`
-              height: 50vh;
-              max-width: 85%;
+              font-size: 64px;
+              color: ${colors.gold};
+              padding: 32px;
             `}
-          />
-        </div>
-        <div
-          css={css`
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            * + * {
-              margin: 1rem;
-            }
-          `}
-        >
-          {PAGES.map((page) => (
-            <GatsbyLink
-              to={page.path}
-              css={css`
-                background: ${colors.realGold};
-                padding: 0.5rem 1rem;
-                border-bottom-left-radius: 12px;
-                border-top-right-radius: 12px;
-                color: black;
-              `}
-            >
-              Go To Manuvèl {page.name}
-            </GatsbyLink>
-          ))}
+          >
+            Coming Soon
+          </h1>
+          <GatsbyLink
+            to="/classic"
+            css={css`
+              background: ${colors.realGold};
+              padding: 0.5rem 1rem;
+              border-bottom-left-radius: 12px;
+              border-top-right-radius: 12px;
+              color: black;
+            `}
+          >
+            Go To Manuvèl (Sint-Niklaas)
+          </GatsbyLink>
         </div>
       </Hero>
     </Layout>
   )
 }
 
-export default IndexPage
+export default ComingSoonPage
