@@ -1,7 +1,7 @@
 ---
 title: Special Events & Workshops
 tagline: Open your mind.
-gold: false
+gold: true
 width: 5
 height: 2
 contentEN: Check our [Facebook page](https://www.facebook.com/manuvel.be/events)

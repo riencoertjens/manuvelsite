@@ -16,6 +16,12 @@ collections:
     fields:
       [
         { label: Title, name: title, widget: string },
+        { label: "Header Image", name: header_image, widget: image },
+        { label: "Opening Hours", name: "opening_hours", widget: list, fields: [
+          { label: 'Day', name: 'day', widget: 'string' },
+          { label: 'Hours', name: 'hours', widget: 'string' },
+          { label: 'Extra Info', name: 'extra', widget: 'string', required: false },
+        ] },
         {
           label: 'Address',
           name: 'address',
