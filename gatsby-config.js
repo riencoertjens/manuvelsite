@@ -106,7 +106,7 @@ module.exports = {
         policy: [
           {
             userAgent: '*',
-            disallow: ['/404', '/admin'],
+            disallow: ['/404', '/admin', '/connect'],
           },
         ],
       },
