@@ -13,7 +13,7 @@ const ComingSoonPage = () => {
   const data = useStaticQuery(graphql`
     query ComingSoonPageQuery {
       headerImage: file(
-        base: { eq: "social-image.jpg" } # sourceInstanceName: { eq: "images" }
+        base: { eq: "coming-soon.jpg" } # sourceInstanceName: { eq: "images" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1800) {
