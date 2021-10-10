@@ -9,21 +9,8 @@ import { colors, fonts } from '../../../site/styles'
 
 const borderRadius = 7.5 //px
 
-export const ContentSection = ({
-  data,
-  section,
-  instaPostCounter,
-  maxLikes,
-}) => (
+export const ContentSection = ({ data, section, maxLikes }) => (
   <React.Fragment>
-    <GeneratePosts
-      posts={data.instaPosts.edges}
-      count={4}
-      counter={instaPostCounter}
-      maxLikes={maxLikes}
-    >
-      {(instaPostCounter += 4)}
-    </GeneratePosts>
     <GridItem
       width={section.width}
       height={section.height}

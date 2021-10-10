@@ -19,7 +19,7 @@ export const HeroSection = ({ data, path }) => (
       align-items: stretch;
     `}
   >
-    {PAGES.filter((page) => page.path !== path).map((page) => (
+    {/* {PAGES.filter((page) => page.path !== path).map((page) => (
       <GatsbyLink
         to={page.path}
         css={css`
@@ -35,7 +35,7 @@ export const HeroSection = ({ data, path }) => (
       >
         Check out Manuvèl {page.name}
       </GatsbyLink>
-    ))}
+    ))} */}
 
     <GatsbyImage
       fluid={

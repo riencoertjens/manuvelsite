@@ -20,9 +20,9 @@ import { ContentSection } from './sections/content'
 
 const borderRadius = 7.5 //px
 
-const LocationTemplate = ({ data, path, ...props }) => {
-  let instaPostCounter = 0
+const LocationTemplate = ({ data, path }) => {
   const maxLikes = data.maxLikes.edges[0].node.likes
+  let instaPostCounter = 0
 
   const sections = data.sections.nodes
 
@@ -39,12 +39,21 @@ const LocationTemplate = ({ data, path, ...props }) => {
           {sections.map(
             ({ childMarkdownRemark: { frontmatter: section } }, key) => {
               return (
-                <ContentSection
-                  data={data}
-                  section={section}
-                  instaPostCounter={instaPostCounter}
-                  maxLikes={maxLikes}
-                />
+                <>
+                  <GeneratePosts
+                    posts={data.instaPosts.edges}
+                    count={4}
+                    counter={instaPostCounter}
+                    maxLikes={maxLikes}
+                  >
+                    {(instaPostCounter += 4)}
+                  </GeneratePosts>
+                  <ContentSection
+                    data={data}
+                    section={section}
+                    maxLikes={maxLikes}
+                  />
+                </>
               )
             }
           )}

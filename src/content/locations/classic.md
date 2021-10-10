@@ -1,13 +1,14 @@
 ---
 title: Classic
-header_image: /img/social-image.jpg
+header_image: /img/st-niklaas.jpg
 opening_hours:
   - day: Mon-Tue
     hours: closed
   - day: Wed-Sat
     hours: 10h - 17h
   - day: Sunday
-    hours: 10h - 13h (lazy breakfast until 12h)
+    hours: 10h - 13h
+    extra: (lazy breakfast until 12h)
 address:
   street: Stationsstraat 95
   city: Sint Niklaas
