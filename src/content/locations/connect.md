@@ -1,10 +1,10 @@
 ---
 title: Connect
-header_image: /img/7a7a8f66-1eb8-11ec-b1f7-02c309bc01c1.jpg
+header_image: /img/244135019_417251303077734_4701238501168893742_n.webp.jpg
 opening_hours:
   - day: Coming Soon
     hours: stay tuned
-    extra: ''
+    extra: ""
 address:
   street: Cauwerburg 115b
   city: Temse
