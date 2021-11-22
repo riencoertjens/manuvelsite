@@ -8,7 +8,7 @@ opening_hours:
     hours: 10h - 17h
   - day: Sunday
     hours: 10h - 13h
-    extra: (lazy breakfast until 12h)
+    extra: "reservations : info@manuvel.be"
 address:
   street: Stationsstraat 95
   city: Sint Niklaas
