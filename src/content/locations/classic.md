@@ -19,10 +19,10 @@ address:
 sections:
   - social-rides
   - visit-our-webshop-now-online
+  - co-working
   - shop-in-shop
   - diy-workbench
   - manuvel-maniacs
   - special-events-workshops
-  - co-working
   - food-drinks
 ---
