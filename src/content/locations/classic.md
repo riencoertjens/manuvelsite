@@ -20,9 +20,9 @@ sections:
   - social-rides
   - visit-our-webshop-now-online
   - shop-in-shop
-  - food-drinks
   - diy-workbench
   - manuvel-maniacs
   - special-events-workshops
+  - food-drinks
   - co-working
 ---
