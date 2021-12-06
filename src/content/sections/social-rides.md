@@ -1,19 +1,9 @@
 ---
-title: SOCIAL RIDES
-tagline: "09/09 18U30"
-height: 5
-width: 4
+title: Social Rides
+tagline: Winter break..keep you posted !
 gold: false
-contentNL: >-
-  Iedereen welkom voor onze Social Rides !
-
-
-  We spreken af @Manuvèl voor een mooie , gegidste rit , afstanden en groepssamenstelling kunnen variëren (check onze Facebook event pagina!) . Nadien blijft Manuvèl open voor een 'après-bike' ;-) . Tot dan ? (*)
-
-
-  (*) Contacteer ons voor een georganiseerde groepsrit voor jouw event of organisatie !
-
-
+width: 4
+height: 5
 contentEN: >-
   Join our Social Rides !
 
@@ -22,4 +12,12 @@ contentEN: >-
 
 
   (*) Please contact us for group ride collabs for your event or organisation !
+contentNL: >-
+  Iedereen welkom voor onze Social Rides !
+
+
+  We spreken af @Manuvèl voor een mooie , gegidste rit , afstanden en groepssamenstelling kunnen variëren (check onze Facebook event pagina!) . Nadien blijft Manuvèl open voor een 'après-bike' ;-) . Tot dan ? (*)
+
+
+  (*) Contacteer ons voor een georganiseerde groepsrit voor jouw event of organisatie !
 ---
