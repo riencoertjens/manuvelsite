@@ -23,6 +23,6 @@ sections:
   - diy-workbench
   - manuvel-maniacs
   - special-events-workshops
-  - food-drinks
   - co-working
+  - food-drinks
 ---
