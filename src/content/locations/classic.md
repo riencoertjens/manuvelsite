@@ -8,7 +8,7 @@ opening_hours:
     hours: 10h - 17h
   - day: Sunday
     hours: 10h - 13h
-    extra: "reservations : info@manuvel.be // GESLOTEN VAN 02/03 TOT 08/03 !!"
+    extra: "reservations : info@manuvel.be"
 address:
   street: Stationsstraat 95
   city: Sint Niklaas
