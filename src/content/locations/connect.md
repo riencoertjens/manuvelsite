@@ -2,9 +2,10 @@
 title: =connect=
 header_image: /img/244135019_417251303077734_4701238501168893742_n.webp.jpg
 opening_hours:
-  - day: Coming Soon
+  - day: OPEN FOR BUSINESS AND PRIVATE EVENTS ,GROUP ACTIVITIES ,SPECIAL OCCASIONS &
+      WHENEVER WE FEEL LIKE IT !
     hours: stay tuned
-    extra: ""
+    extra: Follow us on our Instagram and Facebook page
 address:
   street: Cauwerburg 115B
   city: Temse
