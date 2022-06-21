@@ -33,6 +33,8 @@ export const GridItem = styled('div')`
 export const InstaPost = ({ post, maxLikes }) => {
   const size = Math.round((post.likes / maxLikes) * 2)
 
+  if (!post.image) return <></>
+
   const sizedImages = [
     post.image.childImageSharp.small || false,
     post.image.childImageSharp.medium || false,
