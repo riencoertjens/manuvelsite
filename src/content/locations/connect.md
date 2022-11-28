@@ -3,9 +3,9 @@ title: =connect=
 header_image: /img/244135019_417251303077734_4701238501168893742_n.webp.jpg
 opening_hours:
   - day: OPEN FOR BUSINESS AND PRIVATE EVENTS ,GROUP ACTIVITIES ,SPECIAL OCCASIONS &
-      WHENEVER WE FEEL LIKE IT !
+      WHENEVER WE DAMNED FEEL LIKE IT ! ♥
     hours: stay tuned
-    extra: Follow us on our Instagram and Facebook page
+    extra: "Follow us on our Instagram and Facebook page @manuvel_connect "
 address:
   street: Cauwerburg 115B
   city: Temse
@@ -19,4 +19,5 @@ sections:
   - shop-in-shop
   - social-rides
   - food-drinks
+  - null
 ---
