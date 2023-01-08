@@ -16,7 +16,6 @@ address:
 sections:
   - special-events-workshops
   - co-working
-  - shop-in-shop
   - social-rides
   - food-drinks
 ---
