@@ -19,5 +19,4 @@ sections:
   - shop-in-shop
   - social-rides
   - food-drinks
-  - null
 ---
