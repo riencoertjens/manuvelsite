@@ -1,13 +1,13 @@
-import React from 'react'
 import { graphql } from 'gatsby'
+import React from 'react'
 
 import Layout from '../../components/layout'
 import {
+  OutboundLink,
   Section,
   pxToRem,
-  OutboundLink,
 } from '../../components/webhart-components'
-import { GridWrap, GridItem, InstaPost, GeneratePosts } from './components'
+import { GeneratePosts, GridItem, GridWrap, InstaPost } from './components'
 
 import css from '@emotion/css'
 import WebhartLogo from '../../images/Logo'
@@ -15,8 +15,8 @@ import { colors } from '../../site/styles'
 
 import MailchimpForm from '../../components/MailchimpForm'
 import { Contact } from './sections/contact'
-import { HeroSection } from './sections/hero'
 import { ContentSection } from './sections/content'
+import { HeroSection } from './sections/hero'
 
 const borderRadius = 7.5 //px
 
@@ -189,6 +189,8 @@ export const LocationTemplateQuery = graphql`
       childMarkdownRemark {
         frontmatter {
           title
+          instagram
+          email
           header_image {
             childImageSharp {
               fluid(maxWidth: 1800) {

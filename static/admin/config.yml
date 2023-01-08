@@ -17,6 +17,8 @@ collections:
       [
         { label: Title, name: title, widget: string },
         { label: "Header Image", name: header_image, widget: image },
+        { label: "Instagram handle (zonder @)", name: instagram, widget: string },
+        { label: "email", name: email, widget: string },
         { label: "Opening Hours", name: "opening_hours", widget: list, fields: [
           { label: 'Day', name: 'day', widget: 'string' },
           { label: 'Hours', name: 'hours', widget: 'string' },

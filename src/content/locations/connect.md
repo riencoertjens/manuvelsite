@@ -6,6 +6,8 @@ opening_hours:
       WHENEVER WE DAMNED FEEL LIKE IT ! ♥
     hours: stay tuned
     extra: "Follow us on our Instagram and Facebook page @manuvel_connect "
+instagram: manuvel_connect
+email: temse@manuvel.be
 address:
   street: Cauwerburg 115B
   city: Temse
