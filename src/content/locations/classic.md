@@ -1,6 +1,8 @@
 ---
 title: Classic
 header_image: /img/st-niklaas.jpg
+instagram: manuvel.be
+email: info@manuvel.be
 opening_hours:
   - day: Mon-Tue
     hours: closed
@@ -9,11 +11,9 @@ opening_hours:
   - day: Sunday
     hours: 10h - 13h
     extra: "reservations : info@manuvel.be"
-instagram: manuvel.be
-email: info@manuvel.be
 address:
   street: Stationsstraat 95
-  city: Sint Niklaas
+  city: Sint Niklaas - BE0718.894.714
   post-code: "9100"
   coordinates:
     lat: 51.16851
