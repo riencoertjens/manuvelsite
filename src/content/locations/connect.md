@@ -5,7 +5,8 @@ instagram: manuvel_connect
 email: temse@manuvel.be
 opening_hours:
   - day: OPEN FOR BUSINESS AND PRIVATE EVENTS ,GROUP ACTIVITIES ,SPECIAL OCCASIONS &
-      WHENEVER WE DAMNED FEEL LIKE IT ! ♥
+      WHENEVER WE DAMNED FEEL LIKE IT ! ♥ OUR POP-UP BRANDSTORE IS ALSO
+      AVAILABLE FOR YOUR BUSINESS, CONTACT US !
     hours: stay tuned
     extra: "Follow us on our Instagram and Facebook page @manuvel_connect "
 address:
