@@ -11,8 +11,8 @@ opening_hours:
   - day: Sunday
     hours: 10h - 13h
     extra: "reservations : info@manuvel.be"
-  - day: '"SUMMER BREAK" VAN 21/08 TOT 01/09 !!'
-    hours: (jaarlijks verlof)
+  - day: '"SUMMER BREAK" to be announced...'
+    hours: "(jaarlijks verlof) "
     extra: ""
 address:
   street: Stationsstraat 95
