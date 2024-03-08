@@ -1,6 +1,6 @@
 ---
 title: Social Rides - On the Road or online
-tagline: Winter break..keep you posted !
+tagline: Keep you posted ! Check our Facebook Events !
 gold: false
 width: 4
 height: 5
